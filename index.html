@@ -1,11 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Desarrollador de Software — Servicios Profesionales</title>
+    <meta name="description" content="Desarrollador de software: desarrollo de aplicaciones, páginas web, ciberseguridad y asesoramiento tecnológico."/>
+    <style>
+        :root{
+            --accent:#0066ff;
+            --dark:#0f1724;
+            --muted:#6b7280;
+            --card:#fff;
+            --glass: rgba(255,255,255,0.06);
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        html { scroll-behavior: smooth; }
+        body { margin:0; color:#111827; background: #f7f9fc; -webkit-font-smoothing:antialiased; }
+        /* NAV */
+        .nav{
+            position:fixed; left:0; right:0; top:0; z-index:40;
+            display:flex; align-items:center; justify-content:space-between;
+            padding:14px 20px; backdrop-filter: blur(6px);
+        }
+        .nav .brand{ display:flex; align-items:center; gap:10px; font-weight:700; color:var(--card); }
+        .nav .brand img{ width:34px; height:34px; border-radius:6px; object-fit:cover; }
+        .nav-inner{ display:flex; gap:18px; align-items:center; }
+        .nav a{ color:#fff; text-decoration:none; padding:8px 10px; border-radius:6px; font-weight:600; font-size:15px; }
+        .nav a:hover{ background:rgba(255,255,255,0.08); }
+        .cta-btn{ background:var(--accent); color:#fff; padding:8px 14px; border-radius:8px; text-decoration:none; }
+        /* HERO */
+        .hero{
+            min-height:100vh; display:flex; align-items:center; justify-content:center;
+            color:#fff; text-align:center; padding:120px 20px 80px;
+            background-image: linear-gradient(180deg, rgba(2,6,23,0.45), rgba(2,6,23,0.45)), url('https://images.unsplash.com/photo-1526378729250-63c4f6b3f24a?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=7c9e7b4b7f3e2f1e63d1f6f29d8f5f8e');
+            background-size:cover; background-position:center;
+        }
+        .hero .container{ max-width:1000px; }
+        .hero h1{ font-size:clamp(1.6rem,4vw,2.6rem); margin:0 0 12px; font-weight:800; letter-spacing:-0.02em; }
+        .hero p{ margin:0 0 22px; color:rgba(255,255,255,0.9); font-size:1.05rem; }
+        .hero .actions{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+        .ghost-btn{ padding:8px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.18); color:#fff; text-decoration:none; }
+
+        /* SECTIONS */
+        main{ padding:48px 20px; max-width:1100px; margin: -40px auto 80px; }
+        section{ padding:48px 0; }
+        h2{ margin:0 0 18px; font-size:1.4rem; color:var(--dark); }
+        p.lead{ color:var(--muted); margin:0 0 18px; }
+
+        /* ABOUT */
+        .about{ display:flex; gap:28px; align-items:center; flex-wrap:wrap; }
+        .about .card{ background:var(--card); padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(16,24,40,0.06); flex:1 1 320px; }
+
+        /* SERVICES */
+        .services-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+        .service{ background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(16,24,40,0.04); }
+        .service h3{ margin:0 0 8px; font-size:1.05rem; }
+        .service p{ margin:0; color:var(--muted); font-size:0.95rem; }
+
+        /* PARTNERS */
+        .partners{ display:flex; gap:18px; flex-wrap:wrap; align-items:center; }
+        .partner{ background:#fff; padding:12px 18px; border-radius:10px; box-shadow:0 4px 14px rgba(16,24,40,0.04); min-width:120px; text-align:center; }
+
+        /* CONTACT */
+        .contact-grid{ display:grid; grid-template-columns:1fr 360px; gap:18px; align-items:start; }
+        form{ background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 22px rgba(16,24,40,0.04); }
+        label{ display:block; font-size:0.85rem; margin-bottom:6px; color:var(--muted); }
+        input, textarea, select { width:100%; padding:10px 12px; border:1px solid #e6e9ef; border-radius:8px; font-size:0.95rem; }
+        textarea{ min-height:120px; resize:vertical; }
+        .form-actions{ display:flex; gap:10px; margin-top:12px; }
+        .submit{ background:var(--accent); color:#fff; padding:10px 14px; border-radius:8px; border:0; cursor:pointer; }
+
+        /* FOOTER */
+        footer{ background:#0b1220; color:#cbd5e1; padding:28px 20px; margin-top:36px; }
+        .footer-grid{ max-width:1100px; margin:0 auto; display:flex; gap:20px; flex-wrap:wrap; justify-content:space-between; }
+        .social a{ color:#cbd5e1; text-decoration:none; margin-right:10px; display:inline-block; }
+        .small{ color:#94a3b8; font-size:0.9rem; }
+
+        /* RESPONSIVE NAV */
+        .menu-toggle{ display:none; background:transparent; border:0; color:#fff; font-size:20px; }
+        @media (max-width:880px){
+            .nav-inner{ display:none; position:fixed; top:60px; right:14px; background:rgba(7,10,20,0.9); padding:12px; border-radius:10px; flex-direction:column; min-width:180px; }
+            .menu-toggle{ display:block; }
+            .nav.open .nav-inner{ display:flex; }
+            main{ margin-top:20px; }
+            .contact-grid{ grid-template-columns:1fr; }
+        }
+    </style>
 </head>
 <body>
-    
+    <header class="nav" id="top">
+        <div class="nav-inner-left" style="display:flex;align-items:center;gap:12px;">
+            <a class="brand" href="#home" aria-label="Inicio">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b7b8e18c4c3b8cb0b4b6a4f7a3e8b6d" alt="Logo">
+                DG Desarrollo
+            </a>
+        </div>
+
+        <nav class="nav-inner" role="navigation" aria-label="Menú principal">
+            <a href="#home">Inicio</a>
+            <a href="#about">Quiénes somos</a>
+            <a href="#services">Servicios</a>
+            <a href="#partners">Partners</a>
+            <a href="#contact" class="cta-btn">Contactar</a>
+        </nav>
+
+        <div style="display:flex;gap:10px;align-items:center;">
+            <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú" onclick="document.querySelector('.nav').classList.toggle('open'); toggleMenuBtn(this);">☰</button>
+        </div>
+    </header>
+
+    <section id="home" class="hero" aria-label="Hero">
+        <div class="container">
+            <h1>Desarrollo de software profesional & asesoramiento tecnológico</h1>
+            <p>Creación de aplicaciones, páginas web, implementación y auditoría de ciberseguridad, y apoyo estratégico para tu transformación digital.</p>
+            <div class="actions">
+                <a class="cta-btn" href="#contact">Solicitar presupuesto</a>
+                <a class="ghost-btn" href="#services">Ver servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="about" aria-labelledby="about-title">
+            <h2 id="about-title">Quiénes somos</h2>
+            <p class="lead">Equipo de desarrollo con experiencia en aplicaciones móviles y web, ciberseguridad y consultoría tecnológica. Ayudamos a startups y empresas a construir soluciones robustas, seguras y escalables.</p>
+            <div class="about">
+                <div class="card">
+                    <h3>Misión</h3>
+                    <p>Entregar software de calidad y recomendaciones tecnológicas basadas en las mejores prácticas y estándares de seguridad.</p>
+                </div>
+                <div class="card">
+                    <h3>Visión</h3>
+                    <p>Ser el socio tecnológico confiable que facilita la transformación digital segura y eficiente para empresas de todos los tamaños.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" aria-labelledby="services-title">
+            <h2 id="services-title">Nuestros servicios</h2>
+            <p class="lead">Ofrecemos servicios a medida según las necesidades del proyecto y del negocio.</p>
+            <div class="services-grid">
+                <article class="service" aria-labelledby="s1">
+                    <h3 id="s1">Desarrollo de aplicaciones</h3>
+                    <p>Apps móviles y de escritorio, integración con APIs, despliegue y mantenimiento continuo.</p>
+                </article>
+                <article class="service" aria-labelledby="s2">
+                    <h3 id="s2">Desarrollo de páginas web</h3>
+                    <p>Sitios web corporativos, e-commerce, landing pages optimizadas para conversión y SEO.</p>
+                </article>
+                <article class="service" aria-labelledby="s3">
+                    <h3 id="s3">Ciberseguridad</h3>
+                    <p>Implementación de controles, análisis de vulnerabilidades, pruebas de penetración y hardening de infraestructuras.</p>
+                </article>
+                <article class="service" aria-labelledby="s4">
+                    <h3 id="s4">Asesoramiento tecnológico</h3>
+                    <p>Arquitectura, selección de tecnologías, roadmap técnico y mentoría para equipos.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="partners" aria-labelledby="partners-title">
+            <h2 id="partners-title">Empresas que confían en nosotros</h2>
+            <p class="lead">Algunas de las organizaciones con las que hemos trabajado.</p>
+            <div class="partners" role="list">
+                <div class="partner" role="listitem">Acme Corp</div>
+                <div class="partner" role="listitem">InnovaTech</div>
+                <div class="partner" role="listitem">Finanzas Uno</div>
+                <div class="partner" role="listitem">Green Apps</div>
+                <div class="partner" role="listitem">LogiSoft</div>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contacto</h2>
+            <p class="lead">Escríbenos para solicitar presupuesto o resolver dudas. Respondemos en menos de 48 horas hábiles.</p>
+
+            <div class="contact-grid">
+                <form onsubmit="handleSubmit(event)" aria-label="Formulario de contacto">
+                    <label for="name">Nombre</label>
+                    <input id="name" name="name" required placeholder="Tu nombre completo">
+
+                    <label for="email">Correo electrónico</label>
+                    <input id="email" name="email" type="email" required placeholder="tu@ejemplo.com">
+
+                    <label for="service">Servicio de interés</label>
+                    <select id="service" name="service" required>
+                        <option value="">Selecciona</option>
+                        <option>Desarrollo de aplicaciones</option>
+                        <option>Desarrollo web</option>
+                        <option>Ciberseguridad</option>
+                        <option>Asesoramiento tecnológico</option>
+                    </select>
+
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" placeholder="Describe brevemente tu proyecto" required></textarea>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit">Enviar</button>
+                        <a class="ghost-btn" href="tel:+34123456789">Llamar: +34 123 456 789</a>
+                    </div>
+                </form>
+
+                <aside style="background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 22px rgba(16,24,40,0.04);">
+                    <h3>Contacto rápido</h3>
+                    <p class="small">Móvil: <a href="tel:+34123456789">+34 123 456 789</a></p>
+                    <p class="small">Email: <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a></p>
+                    <p class="small">Horario: L-V, 9:00 — 18:00</p>
+                    <p style="margin-top:10px;" class="small">También puedes enviarnos un mensaje por redes sociales.</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div style="max-width:420px;">
+                <strong style="color:#fff;">DG Desarrollo</strong>
+                <p class="small">Soluciones de software y ciberseguridad para empresas y proyectos.</p>
+                <div class="social" aria-label="Redes sociales">
+                    <a href="#" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.5-1.4-1.9-1.4-1.9-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.2 1.9 1.2 1 .1 1.6-.8 1.9-1.3-.7-.1-1.5-.4-1.5-1.7 0-.4.1-.7.3-1-.3-.1-1.1-.4-2.3.9 0 0-.7-.2-2.2.9 0 0-.5-.2-.1-1.6 0 0 1.5-.5 3 .9 0 0 1.2-.1 2.5-.1s2.5.1 2.5.1c1.5-1.4 3-.9 3-.9.4 1.4-.1 1.6-.1 1.6-1.5-1.1-2.2-.9-2.2-.9-1.2-1.3-2-1-2.3-.9.2.3.3.6.3 1v1.5c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M4.98 3.5c0 1.38-1.12 2.5-2.5 2.5S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V24h-4zM8.5 8.5h3.84v2.12h.06c.54-1 1.86-2.12 3.84-2.12 4.1 0 4.86 2.7 4.86 6.21V24h-4V15.3c0-2.07-.04-4.74-2.88-4.74-2.88 0-3.32 2.24-3.32 4.57V24h-4z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.5 0-4.5 2-4.5 4.5 0 .35.04.7.1 1.03C8.1 8.4 4.3 6.4 1.7 3.1c-.38.65-.6 1.42-.6 2.23 0 1.54.78 2.9 1.98 3.7A4.48 4.48 0 01.8 9.2v.05c0 2.16 1.54 3.97 3.6 4.38-.35.1-.72.14-1.1.14-.27 0-.54-.03-.8-.07.54 1.7 2.1 2.94 3.94 2.97A9 9 0 010 19.54 12.7 12.7 0 006.9 21c8.28 0 12.82-6.85 12.82-12.8 0-.2 0-.4-.02-.6A9.2 9.2 0 0023 3z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div style="display:flex;gap:28px;flex-wrap:wrap;">
+                <div>
+                    <strong style="color:#fff">Contacto</strong>
+                    <p class="small">+34 123 456 789<br>contacto@ejemplo.com</p>
+                </div>
+                <div>
+                    <strong style="color:#fff">Legal</strong>
+                    <p class="small"><a href="#" style="color:#94a3b8;text-decoration:none;">Aviso legal</a><br><a href="#" style="color:#94a3b8;text-decoration:none;">Política de privacidad</a></p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:18px;" class="small">© <span id="year"></span> DG Desarrollo. Todos los derechos reservados.</div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu button aria state
+        function toggleMenuBtn(btn){
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', !expanded);
+        }
+
+        // Simple submit handler (placeholder) — reemplazar con integración real.
+        function handleSubmit(e){
+            e.preventDefault();
+            const form = e.target;
+            const name = form.name.value.trim();
+            const service = form.service.value;
+            alert('Gracias ' + (name||'') + '. Tu mensaje ha sido recibido. Seleccionaste: ' + service);
+            form.reset();
+            location.hash = '#contact';
+        }
+
+        // Set year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
