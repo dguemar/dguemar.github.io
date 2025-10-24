@@ -7,84 +7,124 @@
     <meta name="description" content="Desarrollador de software: desarrollo de aplicaciones, páginas web, ciberseguridad y asesoramiento tecnológico."/>
     <style>
         :root{
-            --accent:#0066ff;
-            --dark:#0f1724;
-            --muted:#6b7280;
-            --card:#fff;
-            --glass: rgba(255,255,255,0.06);
+            /* Dark theme with mustard and sky-blue accents */
+            --bg: #071029;              /* profundo azul marino oscuro */
+            --panel: rgba(255,255,255,0.03);
+            --border: rgba(255,255,255,0.04);
+            --text: #e6f3ff;           /* texto principal muy claro */
+            --muted: #9bb9da;          /* texto secundario (celeste suave) */
+            --accent: #ffb703;         /* mostaza (primario) */
+            --accent-2: #6ec1ff;       /* celeste (secundario) */
+            --brand-dark: #071029;
             font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
         }
+
         html { scroll-behavior: smooth; }
-        body { margin:0; color:#111827; background: #f7f9fc; -webkit-font-smoothing:antialiased; }
+        body { margin:0; color:var(--text); background:var(--bg); -webkit-font-smoothing:antialiased; }
+
         /* NAV */
         .nav{
             position:fixed; left:0; right:0; top:0; z-index:40;
             display:flex; align-items:center; justify-content:space-between;
-            padding:14px 20px; backdrop-filter: blur(6px);
+            padding:12px 20px;
+            background: linear-gradient(180deg, rgba(7,16,36,0.55), rgba(7,16,36,0.35));
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            backdrop-filter: blur(6px);
         }
-        .nav .brand{ display:flex; align-items:center; gap:10px; font-weight:700; color:var(--card); }
-        .nav .brand img{ width:34px; height:34px; border-radius:6px; object-fit:cover; }
+        .nav .brand{ display:flex; align-items:center; gap:10px; font-weight:800; color:var(--text); text-decoration:none; }
+        .nav .brand img{ width:34px; height:34px; border-radius:8px; object-fit:cover; filter:brightness(1.05) saturate(0.9); }
         .nav-inner{ display:flex; gap:18px; align-items:center; }
-        .nav a{ color:#fff; text-decoration:none; padding:8px 10px; border-radius:6px; font-weight:600; font-size:15px; }
-        .nav a:hover{ background:rgba(255,255,255,0.08); }
-        .cta-btn{ background:var(--accent); color:#fff; padding:8px 14px; border-radius:8px; text-decoration:none; }
+        .nav a{ color:var(--text); text-decoration:none; padding:8px 10px; border-radius:8px; font-weight:600; font-size:15px; }
+        .nav a:hover{ background: rgba(110,193,255,0.08); color:var(--accent-2); }
+        .cta-btn{
+            background:var(--accent); color:var(--brand-dark); padding:8px 14px; border-radius:10px; text-decoration:none; font-weight:700;
+            box-shadow: 0 6px 18px rgba(255,183,3,0.12);
+        }
+
         /* HERO */
         .hero{
             min-height:100vh; display:flex; align-items:center; justify-content:center;
-            color:#fff; text-align:center; padding:120px 20px 80px;
-            background-image: linear-gradient(180deg, rgba(2,6,23,0.45), rgba(2,6,23,0.45)), url('https://images.unsplash.com/photo-1526378729250-63c4f6b3f24a?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=7c9e7b4b7f3e2f1e63d1f6f29d8f5f8e');
+            color:var(--text); text-align:center; padding:120px 20px 80px;
+            background-image:
+                linear-gradient(180deg, rgba(3,6,12,0.6), rgba(3,6,12,0.6)),
+                url('https://images.unsplash.com/photo-1526378729250-63c4f6b3f24a?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=7c9e7b4b7f3e2f1e63d1f6f29d8f5f8e');
             background-size:cover; background-position:center;
         }
         .hero .container{ max-width:1000px; }
-        .hero h1{ font-size:clamp(1.6rem,4vw,2.6rem); margin:0 0 12px; font-weight:800; letter-spacing:-0.02em; }
-        .hero p{ margin:0 0 22px; color:rgba(255,255,255,0.9); font-size:1.05rem; }
+        .hero h1{ font-size:clamp(1.6rem,4vw,2.6rem); margin:0 0 12px; font-weight:800; letter-spacing:-0.02em; color:var(--text); }
+        .hero p{ margin:0 0 22px; color:var(--muted); font-size:1.05rem; }
         .hero .actions{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-        .ghost-btn{ padding:8px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.18); color:#fff; text-decoration:none; }
+        .ghost-btn{
+            padding:8px 14px; border-radius:10px; border:1px solid rgba(110,193,255,0.18); color:var(--accent-2); text-decoration:none;
+            background: transparent; font-weight:600;
+        }
 
         /* SECTIONS */
-        main{ padding:48px 20px; max-width:1100px; margin: -40px auto 80px; }
+        main{ padding:48px 20px; max-width:1100px; margin: -40px auto 80px; color:var(--text); }
         section{ padding:48px 0; }
-        h2{ margin:0 0 18px; font-size:1.4rem; color:var(--dark); }
+        h2{ margin:0 0 18px; font-size:1.4rem; color:var(--text); }
         p.lead{ color:var(--muted); margin:0 0 18px; }
 
         /* ABOUT */
         .about{ display:flex; gap:28px; align-items:center; flex-wrap:wrap; }
-        .about .card{ background:var(--card); padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(16,24,40,0.06); flex:1 1 320px; }
+        .about .card{
+            background:var(--panel); padding:20px; border-radius:12px;
+            box-shadow:0 8px 30px rgba(2,6,23,0.5);
+            border: 1px solid var(--border); flex:1 1 320px; color:var(--text);
+        }
 
         /* SERVICES */
         .services-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
-        .service{ background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(16,24,40,0.04); }
-        .service h3{ margin:0 0 8px; font-size:1.05rem; }
+        .service{
+            background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.5);
+            border:1px solid var(--border);
+        }
+        .service h3{ margin:0 0 8px; font-size:1.05rem; color:var(--accent-2); }
         .service p{ margin:0; color:var(--muted); font-size:0.95rem; }
 
         /* PARTNERS */
         .partners{ display:flex; gap:18px; flex-wrap:wrap; align-items:center; }
-        .partner{ background:#fff; padding:12px 18px; border-radius:10px; box-shadow:0 4px 14px rgba(16,24,40,0.04); min-width:120px; text-align:center; }
+        .partner{
+            background:transparent; color:var(--muted); padding:12px 18px; border-radius:10px; border:1px dashed rgba(255,255,255,0.03);
+            min-width:120px; text-align:center;
+        }
 
         /* CONTACT */
         .contact-grid{ display:grid; grid-template-columns:1fr 360px; gap:18px; align-items:start; }
-        form{ background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 22px rgba(16,24,40,0.04); }
+        form{ background:var(--panel); padding:18px; border-radius:12px; box-shadow:0 8px 28px rgba(2,6,23,0.5); border:1px solid var(--border); color:var(--text); }
         label{ display:block; font-size:0.85rem; margin-bottom:6px; color:var(--muted); }
-        input, textarea, select { width:100%; padding:10px 12px; border:1px solid #e6e9ef; border-radius:8px; font-size:0.95rem; }
+        input, textarea, select {
+            width:100%; padding:10px 12px; border:1px solid rgba(255,255,255,0.04);
+            border-radius:8px; font-size:0.95rem; background: rgba(255,255,255,0.02); color:var(--text);
+        }
+        input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.4); }
         textarea{ min-height:120px; resize:vertical; }
         .form-actions{ display:flex; gap:10px; margin-top:12px; }
-        .submit{ background:var(--accent); color:#fff; padding:10px 14px; border-radius:8px; border:0; cursor:pointer; }
+        .submit{
+            background:var(--accent); color:var(--brand-dark); padding:10px 14px; border-radius:8px; border:0; cursor:pointer; font-weight:700;
+            box-shadow: 0 8px 20px rgba(255,183,3,0.12);
+        }
 
         /* FOOTER */
-        footer{ background:#0b1220; color:#cbd5e1; padding:28px 20px; margin-top:36px; }
+        footer{ background:#020613; color:var(--muted); padding:28px 20px; margin-top:36px; border-top:1px solid rgba(255,255,255,0.02); }
         .footer-grid{ max-width:1100px; margin:0 auto; display:flex; gap:20px; flex-wrap:wrap; justify-content:space-between; }
-        .social a{ color:#cbd5e1; text-decoration:none; margin-right:10px; display:inline-block; }
-        .small{ color:#94a3b8; font-size:0.9rem; }
+        .social a{ color:var(--muted); text-decoration:none; margin-right:10px; display:inline-block; }
+        .small{ color:rgba(255,255,255,0.45); font-size:0.9rem; }
 
         /* RESPONSIVE NAV */
-        .menu-toggle{ display:none; background:transparent; border:0; color:#fff; font-size:20px; }
+        .menu-toggle{ display:none; background:transparent; border:0; color:var(--text); font-size:20px; }
         @media (max-width:880px){
-            .nav-inner{ display:none; position:fixed; top:60px; right:14px; background:rgba(7,10,20,0.9); padding:12px; border-radius:10px; flex-direction:column; min-width:180px; }
+            .nav-inner{ display:none; position:fixed; top:60px; right:14px; background:rgba(3,6,12,0.95); padding:12px; border-radius:10px; flex-direction:column; min-width:180px; border:1px solid rgba(255,255,255,0.03); }
             .menu-toggle{ display:block; }
             .nav.open .nav-inner{ display:flex; }
             main{ margin-top:20px; }
             .contact-grid{ grid-template-columns:1fr; }
         }
+
+        /* small tweaks */
+        a { color:var(--accent-2); }
+        .brand-tag { color:var(--accent); font-weight:700; }
     </style>
 </head>
 <body>
@@ -92,7 +132,7 @@
         <div class="nav-inner-left" style="display:flex;align-items:center;gap:12px;">
             <a class="brand" href="#home" aria-label="Inicio">
                 <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b7b8e18c4c3b8cb0b4b6a4f7a3e8b6d" alt="Logo">
-                DG Desarrollo
+                <span style="display:inline-block;margin-left:6px;color:var(--text)">DG <span class="brand-tag">Desarrollo</span></span>
             </a>
         </div>
 
@@ -126,11 +166,11 @@
             <p class="lead">Equipo de desarrollo con experiencia en aplicaciones móviles y web, ciberseguridad y consultoría tecnológica. Ayudamos a startups y empresas a construir soluciones robustas, seguras y escalables.</p>
             <div class="about">
                 <div class="card">
-                    <h3>Misión</h3>
+                    <h3 style="color:var(--accent-2)">Misión</h3>
                     <p>Entregar software de calidad y recomendaciones tecnológicas basadas en las mejores prácticas y estándares de seguridad.</p>
                 </div>
                 <div class="card">
-                    <h3>Visión</h3>
+                    <h3 style="color:var(--accent-2)">Visión</h3>
                     <p>Ser el socio tecnológico confiable que facilita la transformación digital segura y eficiente para empresas de todos los tamaños.</p>
                 </div>
             </div>
@@ -201,8 +241,8 @@
                     </div>
                 </form>
 
-                <aside style="background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 22px rgba(16,24,40,0.04);">
-                    <h3>Contacto rápido</h3>
+                <aside style="background:var(--panel); padding:18px; border-radius:12px; box-shadow:0 8px 28px rgba(2,6,23,0.5); border:1px solid var(--border);">
+                    <h3 style="color:var(--accent-2)">Contacto rápido</h3>
                     <p class="small">Móvil: <a href="tel:+34123456789">+34 123 456 789</a></p>
                     <p class="small">Email: <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a></p>
                     <p class="small">Horario: L-V, 9:00 — 18:00</p>
@@ -215,29 +255,29 @@
     <footer>
         <div class="footer-grid">
             <div style="max-width:420px;">
-                <strong style="color:#fff;">DG Desarrollo</strong>
+                <strong style="color:var(--text);">DG Desarrollo</strong>
                 <p class="small">Soluciones de software y ciberseguridad para empresas y proyectos.</p>
                 <div class="social" aria-label="Redes sociales">
                     <a href="#" aria-label="GitHub">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.5-1.4-1.9-1.4-1.9-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.2 1.9 1.2 1 .1 1.6-.8 1.9-1.3-.7-.1-1.5-.4-1.5-1.7 0-.4.1-.7.3-1-.3-.1-1.1-.4-2.3.9 0 0-.7-.2-2.2.9 0 0-.5-.2-.1-1.6 0 0 1.5-.5 3 .9 0 0 1.2-.1 2.5-.1s2.5.1 2.5.1c1.5-1.4 3-.9 3-.9.4 1.4-.1 1.6-.1 1.6-1.5-1.1-2.2-.9-2.2-.9-1.2-1.3-2-1-2.3-.9.2.3.3.6.3 1v1.5c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle; color:var(--muted)"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.5-1.4-1.9-1.4-1.9-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.2 1.9 1.2 1 .1 1.6-.8 1.9-1.3-.7-.1-1.5-.4-1.5-1.7 0-.4.1-.7.3-1-.3-.1-1.1-.4-2.3.9 0 0-.7-.2-2.2.9 0 0-.5-.2-.1-1.6 0 0 1.5-.5 3 .9 0 0 1.2-.1 2.5-.1s2.5.1 2.5.1c1.5-1.4 3-.9 3-.9.4 1.4-.1 1.6-.1 1.6-1.5-1.1-2.2-.9-2.2-.9-1.2-1.3-2-1-2.3-.9.2.3.3.6.3 1v1.5c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
                     </a>
                     <a href="#" aria-label="LinkedIn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M4.98 3.5c0 1.38-1.12 2.5-2.5 2.5S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V24h-4zM8.5 8.5h3.84v2.12h.06c.54-1 1.86-2.12 3.84-2.12 4.1 0 4.86 2.7 4.86 6.21V24h-4V15.3c0-2.07-.04-4.74-2.88-4.74-2.88 0-3.32 2.24-3.32 4.57V24h-4z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle; color:var(--muted)"><path d="M4.98 3.5c0 1.38-1.12 2.5-2.5 2.5S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V24h-4zM8.5 8.5h3.84v2.12h.06c.54-1 1.86-2.12 3.84-2.12 4.1 0 4.86 2.7 4.86 6.21V24h-4V15.3c0-2.07-.04-4.74-2.88-4.74-2.88 0-3.32 2.24-3.32 4.57V24h-4z"/></svg>
                     </a>
                     <a href="#" aria-label="Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.5 0-4.5 2-4.5 4.5 0 .35.04.7.1 1.03C8.1 8.4 4.3 6.4 1.7 3.1c-.38.65-.6 1.42-.6 2.23 0 1.54.78 2.9 1.98 3.7A4.48 4.48 0 01.8 9.2v.05c0 2.16 1.54 3.97 3.6 4.38-.35.1-.72.14-1.1.14-.27 0-.54-.03-.8-.07.54 1.7 2.1 2.94 3.94 2.97A9 9 0 010 19.54 12.7 12.7 0 006.9 21c8.28 0 12.82-6.85 12.82-12.8 0-.2 0-.4-.02-.6A9.2 9.2 0 0023 3z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle; color:var(--muted)"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.5 0-4.5 2-4.5 4.5 0 .35.04.7.1 1.03C8.1 8.4 4.3 6.4 1.7 3.1c-.38.65-.6 1.42-.6 2.23 0 1.54.78 2.9 1.98 3.7A4.48 4.48 0 01.8 9.2v.05c0 2.16 1.54 3.97 3.6 4.38-.35.1-.72.14-1.1.14-.27 0-.54-.03-.8-.07.54 1.7 2.1 2.94 3.94 2.97A9 9 0 010 19.54 12.7 12.7 0 006.9 21c8.28 0 12.82-6.85 12.82-12.8 0-.2 0-.4-.02-.6A9.2 9.2 0 0023 3z"/></svg>
                     </a>
                 </div>
             </div>
 
             <div style="display:flex;gap:28px;flex-wrap:wrap;">
                 <div>
-                    <strong style="color:#fff">Contacto</strong>
+                    <strong style="color:var(--text)">Contacto</strong>
                     <p class="small">+34 123 456 789<br>contacto@ejemplo.com</p>
                 </div>
                 <div>
-                    <strong style="color:#fff">Legal</strong>
-                    <p class="small"><a href="#" style="color:#94a3b8;text-decoration:none;">Aviso legal</a><br><a href="#" style="color:#94a3b8;text-decoration:none;">Política de privacidad</a></p>
+                    <strong style="color:var(--text)">Legal</strong>
+                    <p class="small"><a href="#" style="color:var(--muted);text-decoration:none;">Aviso legal</a><br><a href="#" style="color:var(--muted);text-decoration:none;">Política de privacidad</a></p>
                 </div>
             </div>
         </div>
