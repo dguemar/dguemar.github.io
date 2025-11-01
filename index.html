@@ -106,6 +106,62 @@
             box-shadow: 0 8px 20px rgba(255,183,3,0.12);
         }
 
+        /* REVIEWS */
+        .reviews-container {
+            margin: 48px 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .reviews-slider {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 20px 0;
+        }
+        .review-card {
+            flex: 0 0 320px;
+            background: var(--panel);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(2,6,23,0.5);
+            border: 1px solid var(--border);
+            scroll-snap-align: start;
+        }
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        .review-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-dark);
+            font-weight: bold;
+        }
+        .review-stars {
+            color: var(--accent);
+            font-size: 18px;
+            margin: 8px 0;
+        }
+        .review-text {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .highlight {
+            color: var(--accent-2);
+            font-weight: 600;
+        }
+
         /* FOOTER */
         footer{ background:#020613; color:var(--muted); padding:28px 20px; margin-top:36px; border-top:1px solid rgba(255,255,255,0.02); }
         .footer-grid{ max-width:1100px; margin:0 auto; display:flex; gap:20px; flex-wrap:wrap; justify-content:space-between; }
@@ -132,7 +188,7 @@
         <div class="nav-inner-left" style="display:flex;align-items:center;gap:12px;">
             <a class="brand" href="#home" aria-label="Inicio">
                 <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b7b8e18c4c3b8cb0b4b6a4f7a3e8b6d" alt="Logo">
-                <span style="display:inline-block;margin-left:6px;color:var(--text)">DG <span class="brand-tag">Desarrollo</span></span>
+                <span style="display:inline-block;margin-left:6px;color:var(--text)">DGM <span class="brand-tag">Tec</span></span>
             </a>
         </div>
 
@@ -163,15 +219,15 @@
     <main>
         <section id="about" aria-labelledby="about-title">
             <h2 id="about-title">Quiénes somos</h2>
-            <p class="lead">Equipo de desarrollo con experiencia en aplicaciones móviles y web, ciberseguridad y consultoría tecnológica. Ayudamos a startups y empresas a construir soluciones robustas, seguras y escalables.</p>
+            <p class="lead"><span class="highlight">En DGM Technologies, somos expertos en transformación digital y desarrollo tecnológico</span>, con más de una década de experiencia creando soluciones innovadoras que impulsan el crecimiento empresarial. Nuestro equipo multidisciplinar combina conocimientos técnicos avanzados con una profunda comprensión de las necesidades empresariales modernas.</p>
             <div class="about">
                 <div class="card">
                     <h3 style="color:var(--accent-2)">Misión</h3>
-                    <p>Entregar software de calidad y recomendaciones tecnológicas basadas en las mejores prácticas y estándares de seguridad.</p>
+                    <p>Proporcionar soluciones tecnológicas de vanguardia que <span class="highlight">maximicen el potencial digital de nuestros clientes</span>. Nos comprometemos a entregar software de alta calidad y asesoramiento estratégico, garantizando la seguridad, escalabilidad y eficiencia en cada proyecto. Nuestro enfoque se centra en crear valor tangible a través de la innovación tecnológica responsable.</p>
                 </div>
                 <div class="card">
                     <h3 style="color:var(--accent-2)">Visión</h3>
-                    <p>Ser el socio tecnológico confiable que facilita la transformación digital segura y eficiente para empresas de todos los tamaños.</p>
+                    <p>Aspiramos a ser reconocidos como el <span class="highlight">referente líder en transformación digital</span> y desarrollo tecnológico en España, destacando por nuestra capacidad para combinar innovación técnica con resultados empresariales medibles. Buscamos establecer relaciones duraderas con nuestros clientes, convirtiéndonos en su socio tecnológico de confianza a largo plazo.</p>
                 </div>
             </div>
         </section>
@@ -182,32 +238,78 @@
             <div class="services-grid">
                 <article class="service" aria-labelledby="s1">
                     <h3 id="s1">Desarrollo de aplicaciones</h3>
-                    <p>Apps móviles y de escritorio, integración con APIs, despliegue y mantenimiento continuo.</p>
+                    <p><span class="highlight">Creamos aplicaciones móviles y de escritorio a medida</span> utilizando las últimas tecnologías. Nuestro proceso incluye desarrollo nativo y multiplataforma, integración perfecta con APIs existentes, implementación de arquitecturas escalables, y planes de mantenimiento continuo para garantizar el rendimiento óptimo.</p>
                 </article>
                 <article class="service" aria-labelledby="s2">
                     <h3 id="s2">Desarrollo de páginas web</h3>
-                    <p>Sitios web corporativos, e-commerce, landing pages optimizadas para conversión y SEO.</p>
+                    <p><span class="highlight">Diseñamos y desarrollamos experiencias web excepcionales</span> que combinan estética y funcionalidad. Especializados en sitios corporativos, plataformas e-commerce, y landing pages optimizadas para SEO y conversión, utilizando las mejores prácticas en rendimiento y experiencia de usuario.</p>
                 </article>
                 <article class="service" aria-labelledby="s3">
                     <h3 id="s3">Ciberseguridad</h3>
-                    <p>Implementación de controles, análisis de vulnerabilidades, pruebas de penetración y hardening de infraestructuras.</p>
+                    <p><span class="highlight">Protegemos su negocio digital con soluciones de seguridad robustas</span>. Ofrecemos auditorías completas, implementación de controles de seguridad, análisis de vulnerabilidades, pruebas de penetración, y fortalecimiento de infraestructuras siguiendo estándares internacionales.</p>
                 </article>
                 <article class="service" aria-labelledby="s4">
                     <h3 id="s4">Asesoramiento tecnológico</h3>
-                    <p>Arquitectura, selección de tecnologías, roadmap técnico y mentoría para equipos.</p>
+                    <p><span class="highlight">Guiamos su transformación digital con experiencia estratégica</span>. Proporcionamos consultoría en arquitectura de sistemas, selección de tecnologías, desarrollo de roadmaps técnicos, y programas de mentoría para equipos, asegurando decisiones tecnológicas alineadas con objetivos empresariales.</p>
                 </article>
             </div>
         </section>
 
         <section id="partners" aria-labelledby="partners-title">
             <h2 id="partners-title">Empresas que confían en nosotros</h2>
-            <p class="lead">Algunas de las organizaciones con las que hemos trabajado.</p>
+            <p class="lead"><span class="highlight">Colaboramos con organizaciones líderes</span> en diversos sectores, ayudándoles a alcanzar sus objetivos tecnológicos y empresariales.</p>
             <div class="partners" role="list">
                 <div class="partner" role="listitem">Acme Corp</div>
                 <div class="partner" role="listitem">InnovaTech</div>
                 <div class="partner" role="listitem">Finanzas Uno</div>
                 <div class="partner" role="listitem">Green Apps</div>
                 <div class="partner" role="listitem">LogiSoft</div>
+            </div>
+
+            <div class="reviews-container">
+                <h3 style="margin-top: 40px;">Lo que dicen nuestros clientes</h3>
+                <div class="reviews-slider">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">MC</div>
+                            <div>
+                                <strong>María Campos</strong>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text">DGM Technologies transformó por completo nuestra presencia online. <span class="highlight">Su desarrollo web no solo mejoró nuestra imagen, sino que aumentó nuestras conversiones en un 150%</span>. El equipo fue profesional y atento durante todo el proceso.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">AR</div>
+                            <div>
+                                <strong>Antonio Ruiz</strong>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text"><span class="highlight">La aplicación móvil que desarrollaron para nuestra empresa ha revolucionado la forma en que interactuamos con nuestros clientes</span>. El proceso fue transparente y el resultado superó nuestras expectativas. ¡Totalmente recomendados!</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">LP</div>
+                            <div>
+                                <strong>Laura Pérez</strong>
+                                <div class="review-stars">★★★★½</div>
+                            </div>
+                        </div>
+                        <p class="review-text">Su servicio de ciberseguridad es excepcional. <span class="highlight">Identificaron vulnerabilidades críticas que no habíamos detectado y nos ayudaron a implementar medidas de protección efectivas</span>. Su experiencia en seguridad es invaluable.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">JM</div>
+                            <div>
+                                <strong>José Martínez</strong>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text">El asesoramiento tecnológico de DGM Tec fue crucial para nuestra transformación digital. <span class="highlight">Sus recomendaciones nos ayudaron a optimizar procesos y reducir costos operativos en un 30%</span>. Su visión estratégica es extraordinaria.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -244,7 +346,7 @@
                 <aside style="background:var(--panel); padding:18px; border-radius:12px; box-shadow:0 8px 28px rgba(2,6,23,0.5); border:1px solid var(--border);">
                     <h3 style="color:var(--accent-2)">Contacto rápido</h3>
                     <p class="small">Móvil: <a href="tel:+34123456789">+34 123 456 789</a></p>
-                    <p class="small">Email: <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a></p>
+                    <p class="small">Email: <a href="mailto:dgmtec_contacta@gmail.com">dgmtec_contacta@gmail.com</a></p>
                     <p class="small">Horario: L-V, 9:00 — 18:00</p>
                     <p style="margin-top:10px;" class="small">También puedes enviarnos un mensaje por redes sociales.</p>
                 </aside>
@@ -255,8 +357,8 @@
     <footer>
         <div class="footer-grid">
             <div style="max-width:420px;">
-                <strong style="color:var(--text);">DG Desarrollo</strong>
-                <p class="small">Soluciones de software y ciberseguridad para empresas y proyectos.</p>
+                <strong style="color:var(--text);">DGM Technologies</strong>
+                <p class="small">Soluciones tecnológicas innovadoras para empresas y proyectos de transformación digital.</p>
                 <div class="social" aria-label="Redes sociales">
                     <a href="#" aria-label="GitHub">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle; color:var(--muted)"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.5-1.4-1.9-1.4-1.9-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.2 1.9 1.2 1 .1 1.6-.8 1.9-1.3-.7-.1-1.5-.4-1.5-1.7 0-.4.1-.7.3-1-.3-.1-1.1-.4-2.3.9 0 0-.7-.2-2.2.9 0 0-.5-.2-.1-1.6 0 0 1.5-.5 3 .9 0 0 1.2-.1 2.5-.1s2.5.1 2.5.1c1.5-1.4 3-.9 3-.9.4 1.4-.1 1.6-.1 1.6-1.5-1.1-2.2-.9-2.2-.9-1.2-1.3-2-1-2.3-.9.2.3.3.6.3 1v1.5c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
@@ -273,7 +375,7 @@
             <div style="display:flex;gap:28px;flex-wrap:wrap;">
                 <div>
                     <strong style="color:var(--text)">Contacto</strong>
-                    <p class="small">+34 123 456 789<br>contacto@ejemplo.com</p>
+                    <p class="small">+34 123 456 789<br>dgmtec_contacta@gmail.com</p>
                 </div>
                 <div>
                     <strong style="color:var(--text)">Legal</strong>
@@ -281,7 +383,7 @@
                 </div>
             </div>
         </div>
-        <div style="text-align:center; margin-top:18px;" class="small">© <span id="year"></span> DG Desarrollo. Todos los derechos reservados.</div>
+        <div style="text-align:center; margin-top:18px;" class="small">© <span id="year"></span> DGM Technologies. Todos los derechos reservados.</div>
     </footer>
 
     <script>
