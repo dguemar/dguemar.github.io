@@ -47,8 +47,9 @@
             color:var(--text); text-align:center; padding:120px 20px 80px;
             background-image:
                 linear-gradient(180deg, rgba(3,6,12,0.6), rgba(3,6,12,0.6)),
-                url('https://images.unsplash.com/photo-1526378729250-63c4f6b3f24a?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=7c9e7b4b7f3e2f1e63d1f6f29d8f5f8e');
+                url('./images/cabecera.png');
             background-size:cover; background-position:center;
+            background-repeat:no-repeat;
         }
         .hero .container{ max-width:1000px; }
         .hero h1{ font-size:clamp(1.6rem,4vw,2.6rem); margin:0 0 12px; font-weight:800; letter-spacing:-0.02em; color:var(--text); }
@@ -68,9 +69,18 @@
         /* ABOUT */
         .about{ display:flex; gap:28px; align-items:center; flex-wrap:wrap; }
         .about .card{
-            background:var(--panel); padding:20px; border-radius:12px;
+            background:var(--panel); padding:28px; border-radius:12px;
             box-shadow:0 8px 30px rgba(2,6,23,0.5);
-            border: 1px solid var(--border); flex:1 1 320px; color:var(--text);
+            border: 1px solid var(--border); flex:1 1 420px; color:var(--text);
+            display: flex; align-items: flex-start; gap: 24px;
+        }
+        .about .card .card-content {
+            flex: 1;
+        }
+        .about .card .card-logo {
+            width: 96px;
+            height: 96px;
+            object-fit: contain;
         }
 
         /* SERVICES */
@@ -229,12 +239,18 @@
             <p class="lead"><span class="highlight" style="color:var(--accent-2)">En DGM Technologies, somos expertos en transformación digital y desarrollo tecnológico</span>, con más de una década de experiencia creando soluciones innovadoras que impulsan el crecimiento empresarial. Nuestro equipo multidisciplinar combina conocimientos técnicos avanzados con una profunda comprensión de las necesidades empresariales modernas.</p>
             <div class="about">
                 <div class="card">
-                    <h3 style="color:var(--text)">Misión</h3>
-                    <p>Proporcionar soluciones tecnológicas de vanguardia que <span class="highlight" style="color:var(--accent-2)">maximicen el potencial digital de nuestros clientes</span>. Nos comprometemos a entregar software de alta calidad y asesoramiento estratégico, garantizando la seguridad, escalabilidad y eficiencia en cada proyecto. Nuestro enfoque se centra en crear valor tangible a través de la innovación tecnológica responsable.</p>
+                    <img src="./images/mision.png" alt="Logo Misión" class="card-logo">
+                    <div class="card-content">
+                        <h3 style="color:var(--text)">Misión</h3>
+                        <p>Proporcionar soluciones tecnológicas de vanguardia que <span class="highlight" style="color:var(--accent-2)">maximicen el potencial digital de nuestros clientes</span>. Nos comprometemos a entregar software de alta calidad y asesoramiento estratégico, garantizando la seguridad, escalabilidad y eficiencia en cada proyecto. Nuestro enfoque se centra en crear valor tangible a través de la innovación tecnológica responsable.</p>
+                    </div>
                 </div>
                 <div class="card">
-                    <h3 style="color:var(--text)">Visión</h3>
-                    <p>Aspiramos a ser reconocidos como el <span class="highlight" style="color:var(--accent-2)">referente líder en transformación digital</span> y desarrollo tecnológico en España, destacando por nuestra capacidad para combinar innovación técnica con resultados empresariales medibles. Buscamos establecer relaciones duraderas con nuestros clientes, convirtiéndonos en su socio tecnológico de confianza a largo plazo.</p>
+                    <img src="./images/vision.png" alt="Logo Visión" class="card-logo">
+                    <div class="card-content">
+                        <h3 style="color:var(--text)">Visión</h3>
+                        <p>Aspiramos a ser reconocidos como el <span class="highlight" style="color:var(--accent-2)">referente líder en transformación digital</span> y desarrollo tecnológico en España, destacando por nuestra capacidad para combinar innovación técnica con resultados empresariales medibles. Buscamos establecer relaciones duraderas con nuestros clientes, convirtiéndonos en su socio tecnológico de confianza a largo plazo.</p>
+                    </div>
                 </div>
             </div>
         </section>
