@@ -62,7 +62,7 @@
         /* SECTIONS */
         main{ padding:48px 20px; max-width:1100px; margin: -40px auto 80px; color:var(--text); }
         section{ padding:48px 0; }
-        h2{ margin:0 0 18px; font-size:1.4rem; color:var(--text); }
+    h2{ margin:0 0 18px; font-size:1.8rem; color:var(--text); }
         p.lead{ color:var(--muted); margin:0 0 18px; }
 
         /* ABOUT */
@@ -80,7 +80,8 @@
             padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.5);
             border:1px solid var(--border);
         }
-        .service h3{ margin:0 0 8px; font-size:1.05rem; color:var(--accent-2); }
+    .service h3{ margin:0 0 8px; font-size:1.05rem; color:var(--text); }
+    .card h3{ margin:0 0 8px; font-size:1.05rem; color:var(--text); text-align:center; }
         .service p{ margin:0; color:var(--muted); font-size:0.95rem; }
 
         /* PARTNERS */
@@ -188,7 +189,7 @@
         <div class="nav-inner-left" style="display:flex;align-items:center;gap:12px;">
             <a class="brand" href="#home" aria-label="Inicio">
                 <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b7b8e18c4c3b8cb0b4b6a4f7a3e8b6d" alt="Logo">
-                <span style="display:inline-block;margin-left:6px;color:var(--text)">DGM <span class="brand-tag">Tec</span></span>
+                <span style="display:inline-block;margin-left:6px;color:var(--text)"><span style="color:var(--accent);font-weight:800">DGM</span> Tecnologies</span>
             </a>
         </div>
 
@@ -197,6 +198,7 @@
             <a href="#about">Quiénes somos</a>
             <a href="#services">Servicios</a>
             <a href="#partners">Partners</a>
+            <a href="#reviews">Opiniones</a>
             <a href="#contact" class="cta-btn">Contactar</a>
         </nav>
 
@@ -207,7 +209,7 @@
 
     <section id="home" class="hero" aria-label="Hero">
         <div class="container">
-            <h1>Desarrollo de software profesional & asesoramiento tecnológico</h1>
+            <h1 style="color:var(--accent)">Desarrollo de software profesional & asesoramiento tecnológico</h1>
             <p>Creación de aplicaciones, páginas web, implementación y auditoría de ciberseguridad, y apoyo estratégico para tu transformación digital.</p>
             <div class="actions">
                 <a class="cta-btn" href="#contact">Solicitar presupuesto</a>
@@ -219,45 +221,45 @@
     <main>
         <section id="about" aria-labelledby="about-title">
             <h2 id="about-title">Quiénes somos</h2>
-            <p class="lead"><span class="highlight">En DGM Technologies, somos expertos en transformación digital y desarrollo tecnológico</span>, con más de una década de experiencia creando soluciones innovadoras que impulsan el crecimiento empresarial. Nuestro equipo multidisciplinar combina conocimientos técnicos avanzados con una profunda comprensión de las necesidades empresariales modernas.</p>
+            <p class="lead"><span class="highlight" style="color:var(--accent-2)">En DGM Technologies, somos expertos en transformación digital y desarrollo tecnológico</span>, con más de una década de experiencia creando soluciones innovadoras que impulsan el crecimiento empresarial. Nuestro equipo multidisciplinar combina conocimientos técnicos avanzados con una profunda comprensión de las necesidades empresariales modernas.</p>
             <div class="about">
                 <div class="card">
-                    <h3 style="color:var(--accent-2)">Misión</h3>
-                    <p>Proporcionar soluciones tecnológicas de vanguardia que <span class="highlight">maximicen el potencial digital de nuestros clientes</span>. Nos comprometemos a entregar software de alta calidad y asesoramiento estratégico, garantizando la seguridad, escalabilidad y eficiencia en cada proyecto. Nuestro enfoque se centra en crear valor tangible a través de la innovación tecnológica responsable.</p>
+                    <h3 style="color:var(--text)">Misión</h3>
+                    <p>Proporcionar soluciones tecnológicas de vanguardia que <span class="highlight" style="color:var(--accent-2)">maximicen el potencial digital de nuestros clientes</span>. Nos comprometemos a entregar software de alta calidad y asesoramiento estratégico, garantizando la seguridad, escalabilidad y eficiencia en cada proyecto. Nuestro enfoque se centra en crear valor tangible a través de la innovación tecnológica responsable.</p>
                 </div>
                 <div class="card">
-                    <h3 style="color:var(--accent-2)">Visión</h3>
-                    <p>Aspiramos a ser reconocidos como el <span class="highlight">referente líder en transformación digital</span> y desarrollo tecnológico en España, destacando por nuestra capacidad para combinar innovación técnica con resultados empresariales medibles. Buscamos establecer relaciones duraderas con nuestros clientes, convirtiéndonos en su socio tecnológico de confianza a largo plazo.</p>
+                    <h3 style="color:var(--text)">Visión</h3>
+                    <p>Aspiramos a ser reconocidos como el <span class="highlight" style="color:var(--accent-2)">referente líder en transformación digital</span> y desarrollo tecnológico en España, destacando por nuestra capacidad para combinar innovación técnica con resultados empresariales medibles. Buscamos establecer relaciones duraderas con nuestros clientes, convirtiéndonos en su socio tecnológico de confianza a largo plazo.</p>
                 </div>
             </div>
         </section>
 
         <section id="services" aria-labelledby="services-title">
-            <h2 id="services-title">Nuestros servicios</h2>
+                <h2 id="services-title">Nuestros servicios</h2>
             <p class="lead">Ofrecemos servicios a medida según las necesidades del proyecto y del negocio.</p>
             <div class="services-grid">
                 <article class="service" aria-labelledby="s1">
                     <h3 id="s1">Desarrollo de aplicaciones</h3>
-                    <p><span class="highlight">Creamos aplicaciones móviles y de escritorio a medida</span> utilizando las últimas tecnologías. Nuestro proceso incluye desarrollo nativo y multiplataforma, integración perfecta con APIs existentes, implementación de arquitecturas escalables, y planes de mantenimiento continuo para garantizar el rendimiento óptimo.</p>
+                    <p><span class="highlight" style="color:var(--accent-2)">Creamos aplicaciones móviles y de escritorio a medida</span> utilizando las últimas tecnologías. Nuestro proceso incluye desarrollo nativo y multiplataforma, integración perfecta con APIs existentes, implementación de arquitecturas escalables, y planes de mantenimiento continuo para garantizar el rendimiento óptimo.</p>
                 </article>
                 <article class="service" aria-labelledby="s2">
                     <h3 id="s2">Desarrollo de páginas web</h3>
-                    <p><span class="highlight">Diseñamos y desarrollamos experiencias web excepcionales</span> que combinan estética y funcionalidad. Especializados en sitios corporativos, plataformas e-commerce, y landing pages optimizadas para SEO y conversión, utilizando las mejores prácticas en rendimiento y experiencia de usuario.</p>
+                    <p><span class="highlight" style="color:var(--accent-2)">Diseñamos y desarrollamos experiencias web excepcionales</span> que combinan estética y funcionalidad. Especializados en sitios corporativos, plataformas e-commerce, y landing pages optimizadas para SEO y conversión, utilizando las mejores prácticas en rendimiento y experiencia de usuario.</p>
                 </article>
                 <article class="service" aria-labelledby="s3">
                     <h3 id="s3">Ciberseguridad</h3>
-                    <p><span class="highlight">Protegemos su negocio digital con soluciones de seguridad robustas</span>. Ofrecemos auditorías completas, implementación de controles de seguridad, análisis de vulnerabilidades, pruebas de penetración, y fortalecimiento de infraestructuras siguiendo estándares internacionales.</p>
+                    <p><span class="highlight" style="color:var(--accent-2)">Protegemos su negocio digital con soluciones de seguridad robustas</span>. Ofrecemos auditorías completas, implementación de controles de seguridad, análisis de vulnerabilidades, pruebas de penetración, y fortalecimiento de infraestructuras siguiendo estándares internacionales.</p>
                 </article>
                 <article class="service" aria-labelledby="s4">
                     <h3 id="s4">Asesoramiento tecnológico</h3>
-                    <p><span class="highlight">Guiamos su transformación digital con experiencia estratégica</span>. Proporcionamos consultoría en arquitectura de sistemas, selección de tecnologías, desarrollo de roadmaps técnicos, y programas de mentoría para equipos, asegurando decisiones tecnológicas alineadas con objetivos empresariales.</p>
+                    <p><span class="highlight" style="color:var(--accent-2)">Guiamos su transformación digital con experiencia estratégica</span>. Proporcionamos consultoría en arquitectura de sistemas, selección de tecnologías, desarrollo de roadmaps técnicos, y programas de mentoría para equipos, asegurando decisiones tecnológicas alineadas con objetivos empresariales.</p>
                 </article>
             </div>
         </section>
 
         <section id="partners" aria-labelledby="partners-title">
             <h2 id="partners-title">Empresas que confían en nosotros</h2>
-            <p class="lead"><span class="highlight">Colaboramos con organizaciones líderes</span> en diversos sectores, ayudándoles a alcanzar sus objetivos tecnológicos y empresariales.</p>
+            <p class="lead"><span class="highlight" style="color:var(--accent-2)">Colaboramos con organizaciones líderes</span> en diversos sectores, ayudándoles a alcanzar sus objetivos tecnológicos y empresariales.</p>
             <div class="partners" role="list">
                 <div class="partner" role="listitem">Acme Corp</div>
                 <div class="partner" role="listitem">InnovaTech</div>
@@ -267,7 +269,7 @@
             </div>
 
             <div class="reviews-container">
-                <h3 style="margin-top: 40px;">Lo que dicen nuestros clientes</h3>
+                <h2 id="reviews" style="margin-top: 8px;">Lo que opinan nuestros clientes</h2>
                 <div class="reviews-slider">
                     <div class="review-card">
                         <div class="review-header">
@@ -309,6 +311,40 @@
                         </div>
                         <p class="review-text">El asesoramiento tecnológico de DGM Tec fue crucial para nuestra transformación digital. <span class="highlight">Sus recomendaciones nos ayudaron a optimizar procesos y reducir costos operativos en un 30%</span>. Su visión estratégica es extraordinaria.</p>
                     </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">SR</div>
+                            <div>
+                                <strong>Sergio Ramos</strong>
+                                <div class="review-stars">★★★★☆</div>
+                            </div>
+                        </div>
+                        <p class="review-text">Buen trabajo en la integración de sistemas. <span class="highlight">La entrega fue puntual y el equipo respondió rápido a las incidencias</span>. Recomendable para proyectos que necesitan integración compleja entre herramientas.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">CM</div>
+                            <div>
+                                <strong>Carmen Molina</strong>
+                                <div class="review-stars">★★★☆☆</div>
+                            </div>
+                        </div>
+                        <p class="review-text">Servicio correcto en general, la comunicación pudo mejorar en fases finales. <span class="highlight">El resultado final cubrió las funciones esenciales de nuestra plataforma</span>, aunque hubo ajustes posteriores.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">IB</div>
+                            <div>
+                                <strong>Iván Blanco</strong>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text">Excelente trabajo en ciberseguridad. <span class="highlight">Detectaron y remediaron vulnerabilidades críticas antes del lanzamiento</span>, lo que nos dio tranquilidad y confianza para ofrecer el servicio en producción.</p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -368,6 +404,15 @@
                     </a>
                     <a href="#" aria-label="Twitter">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle; color:var(--muted)"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.5 0-4.5 2-4.5 4.5 0 .35.04.7.1 1.03C8.1 8.4 4.3 6.4 1.7 3.1c-.38.65-.6 1.42-.6 2.23 0 1.54.78 2.9 1.98 3.7A4.48 4.48 0 01.8 9.2v.05c0 2.16 1.54 3.97 3.6 4.38-.35.1-.72.14-1.1.14-.27 0-.54-.03-.8-.07.54 1.7 2.1 2.94 3.94 2.97A9 9 0 010 19.54 12.7 12.7 0 006.9 21c8.28 0 12.82-6.85 12.82-12.8 0-.2 0-.4-.02-.6A9.2 9.2 0 0023 3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle; color:var(--muted)"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zM12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9zm0 2a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM17.5 6a.9.9 0 100 1.8.9.9 0 000-1.8z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle; color:var(--muted)"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2V12h2.2V9.8c0-2.2 1.3-3.4 3.3-3.4.95 0 1.95.17 1.95.17v2.15h-1.1c-1.08 0-1.42.67-1.42 1.35V12h2.42l-.39 2.9h-2.03v7A10 10 0 0022 12z"/></svg>
+                    </a>
+                    <a href="#" aria-label="WhatsApp">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle; color:var(--muted)"><path d="M20.52 3.48A11.86 11.86 0 0012 .1C6.16.1 1.1 5.18 1.1 11c0 1.93.5 3.82 1.45 5.5L0 24l7.7-2.02A11.85 11.85 0 0012 22C17.84 22 22.9 16.92 22.9 11c0-1.87-.5-3.66-1.38-5.02zM12 20.2c-1.3 0-2.57-.34-3.68-.98l-.26-.16-4.58 1.2 1.24-4.46-.17-.29A8.05 8.05 0 013.9 11c0-4.12 3.35-7.5 8.1-7.5 2.16 0 4.18.82 5.72 2.31A7.8 7.8 0 0120 11c0 4.09-3.35 7.2-8 7.2zM16.3 14.1c-.22-.11-1.3-.64-1.5-.71-.2-.08-.34-.11-.48.11-.13.22-.5.71-.61.86-.11.15-.22.17-.43.06-.22-.11-.91-.33-1.74-1.07-.64-.57-1.07-1.28-1.19-1.5-.12-.22-.01-.34.1-.45.1-.09.22-.22.33-.33.11-.11.15-.19.22-.32.07-.13.03-.25-.02-.36-.06-.11-.48-1.16-.66-1.59-.17-.43-.35-.37-.48-.38-.12-.01-.26-.01-.4-.01-.13 0-.34.05-.52.25-.18.2-.69.67-.69 1.64s.71 1.9.81 2.04c.11.15 1.4 2.2 3.4 3.08 2.01.88 2.01.59 2.38.55.36-.05 1.3-.53 1.49-1.04.19-.5.19-.92.13-1.04-.06-.12-.22-.17-.44-.28z"/></svg>
                     </a>
                 </div>
             </div>
