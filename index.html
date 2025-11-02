@@ -77,8 +77,13 @@
         .services-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
         .service{
             background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-            padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.5);
+            padding:28px 18px 18px 18px; border-radius:16px; box-shadow:0 6px 18px rgba(2,6,23,0.5);
             border:1px solid var(--border);
+            display:flex; flex-direction:column; align-items:center; min-height:260px;
+        }
+        .service-logo{
+            width:192px; height:192px; object-fit:contain; margin-bottom:2px; margin-top:-2px;
+            display:block;
         }
     .service h3{ margin:0 0 8px; font-size:1.05rem; color:var(--text); }
     .card h3{ margin:0 0 8px; font-size:1.05rem; color:var(--text); text-align:center; }
@@ -239,18 +244,22 @@
             <p class="lead">Ofrecemos servicios a medida según las necesidades del proyecto y del negocio.</p>
             <div class="services-grid">
                 <article class="service" aria-labelledby="s1">
+                    <img src="./images/logo_app.png" alt="Logo Desarrollo de aplicaciones" class="service-logo" />
                     <h3 id="s1">Desarrollo de aplicaciones</h3>
                     <p><span class="highlight" style="color:var(--accent-2)">Creamos aplicaciones móviles y de escritorio a medida</span> utilizando las últimas tecnologías. Nuestro proceso incluye desarrollo nativo y multiplataforma, integración perfecta con APIs existentes, implementación de arquitecturas escalables, y planes de mantenimiento continuo para garantizar el rendimiento óptimo.</p>
                 </article>
                 <article class="service" aria-labelledby="s2">
+                    <img src="./images/logo_web.png" alt="Logo Desarrollo de páginas web" class="service-logo" />
                     <h3 id="s2">Desarrollo de páginas web</h3>
                     <p><span class="highlight" style="color:var(--accent-2)">Diseñamos y desarrollamos experiencias web excepcionales</span> que combinan estética y funcionalidad. Especializados en sitios corporativos, plataformas e-commerce, y landing pages optimizadas para SEO y conversión, utilizando las mejores prácticas en rendimiento y experiencia de usuario.</p>
                 </article>
                 <article class="service" aria-labelledby="s3">
+                    <img src="./images/logo_seg.png" alt="Logo Ciberseguridad" class="service-logo" />
                     <h3 id="s3">Ciberseguridad</h3>
                     <p><span class="highlight" style="color:var(--accent-2)">Protegemos su negocio digital con soluciones de seguridad robustas</span>. Ofrecemos auditorías completas, implementación de controles de seguridad, análisis de vulnerabilidades, pruebas de penetración, y fortalecimiento de infraestructuras siguiendo estándares internacionales.</p>
                 </article>
                 <article class="service" aria-labelledby="s4">
+                    <img src="./images/logo_aseso.png" alt="Logo Asesoramiento tecnológico" class="service-logo" />
                     <h3 id="s4">Asesoramiento tecnológico</h3>
                     <p><span class="highlight" style="color:var(--accent-2)">Guiamos su transformación digital con experiencia estratégica</span>. Proporcionamos consultoría en arquitectura de sistemas, selección de tecnologías, desarrollo de roadmaps técnicos, y programas de mentoría para equipos, asegurando decisiones tecnológicas alineadas con objetivos empresariales.</p>
                 </article>
