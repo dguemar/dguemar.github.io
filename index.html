@@ -100,10 +100,61 @@
         .service p{ margin:0; color:var(--muted); font-size:0.95rem; }
 
         /* PARTNERS */
-        .partners{ display:flex; gap:18px; flex-wrap:wrap; align-items:center; }
-        .partner{
-            background:transparent; color:var(--muted); padding:12px 18px; border-radius:10px; border:1px dashed rgba(255,255,255,0.03);
-            min-width:120px; text-align:center;
+        .partners-container {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+            width: 100vw;
+        }
+        .partners-slider {
+            display: flex;
+            gap: 24px;
+            transition: transform 0.5s ease;
+            width: 100%;
+            padding: 0 calc((100vw - 1100px) / 2);
+        }
+        .partner {
+            flex: 0 0 calc(20% - 20px);
+            min-width: 200px;
+            background: var(--panel);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(2,6,23,0.5);
+            border: 1px solid var(--border);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .partner img {
+            height: 120px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 12px;
+            transition: transform 0.3s ease;
+        }
+        .partner:hover img {
+            transform: scale(1.05);
+        }
+        .partner-name {
+            color: var(--text);
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        @keyframes slidePartners {
+            from { transform: translateX(calc(-20% * 14)); }
+            to { transform: translateX(0); }
+        }
+
+        .partners-slider {
+            animation: slidePartners 84s linear infinite;
+        }
+        .partners-slider:hover {
+            animation-play-state: paused;
         }
 
         /* CONTACT */
@@ -124,27 +175,38 @@
 
         /* REVIEWS */
         .reviews-container {
-            margin: 48px 0;
+            margin: 24px 0 48px;
             overflow: hidden;
             position: relative;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+            width: 100vw;
         }
         .reviews-slider {
             display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            padding: 20px 0;
+            gap: 24px;
+            padding: 20px calc((100vw - 1100px) / 2);
+            transition: transform 0.5s ease;
+            width: fit-content;
         }
         .review-card {
-            flex: 0 0 320px;
+            flex: 0 0 calc(25% - 18px);
+            min-width: 260px;
             background: var(--panel);
-            padding: 20px;
+            padding: 24px;
             border-radius: 12px;
             box-shadow: 0 8px 30px rgba(2,6,23,0.5);
             border: 1px solid var(--border);
-            scroll-snap-align: start;
+        }
+        @keyframes slideReviews {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-25% * 6 - 24px * 6)); }
+        }
+        .reviews-slider {
+            animation: slideReviews 72s linear infinite;
+        }
+        .reviews-slider:hover {
+            animation-play-state: paused;
         }
         .review-header {
             display: flex;
@@ -285,16 +347,87 @@
         <section id="partners" aria-labelledby="partners-title">
             <h2 id="partners-title">Empresas que confían en nosotros</h2>
             <p class="lead"><span class="highlight" style="color:var(--accent-2)">Colaboramos con organizaciones líderes</span> en diversos sectores, ayudándoles a alcanzar sus objetivos tecnológicos y empresariales.</p>
-            <div class="partners" role="list">
-                <div class="partner" role="listitem">Acme Corp</div>
-                <div class="partner" role="listitem">InnovaTech</div>
-                <div class="partner" role="listitem">Finanzas Uno</div>
-                <div class="partner" role="listitem">Green Apps</div>
-                <div class="partner" role="listitem">LogiSoft</div>
+            <div class="partners-container">
+                <div class="partners-slider">
+                    <!-- Original partners -->
+                    <div class="partner">
+                        <img src="./images/zv.png" alt="IES Zaidín Vergeles">
+                        <div class="partner-name">IES Zaidín Vergeles</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/gob.png" alt="Gobierno de España">
+                        <div class="partner-name">Gobierno de España</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/hp.png" alt="HP">
+                        <div class="partner-name">HP</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/red.png" alt="red.es">
+                        <div class="partner-name">red.es</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/ugr.png" alt="UGR">
+                        <div class="partner-name">UGR</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/mercadona.png" alt="Mercadona">
+                        <div class="partner-name">Mercadona</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/movistar.png" alt="Movistar">
+                        <div class="partner-name">Movistar</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/xataca.png" alt="Xataca">
+                        <div class="partner-name">Xataca</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/aws.png" alt="AWS">
+                        <div class="partner-name">AWS</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/avast.png" alt="Avast">
+                        <div class="partner-name">Avast</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/cisco.png" alt="Cisco">
+                        <div class="partner-name">Cisco</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/intel.png" alt="Intel">
+                        <div class="partner-name">Intel</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/tsystems.png" alt="T-Systems">
+                        <div class="partner-name">T-Systems</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/prosegur.png" alt="Prosegur Alarmas">
+                        <div class="partner-name">Prosegur Alarmas</div>
+                    </div>
+                    <!-- Duplicate first few partners for smooth infinite scroll -->
+                    <div class="partner">
+                        <img src="./images/zv.png" alt="IES Zaidín Vergeles">
+                        <div class="partner-name">IES Zaidín Vergeles</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/gob.png" alt="Gobierno de España">
+                        <div class="partner-name">Gobierno de España</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/hp.png" alt="HP">
+                        <div class="partner-name">HP</div>
+                    </div>
+                    <div class="partner">
+                        <img src="./images/red.png" alt="red.es">
+                        <div class="partner-name">red.es</div>
+                    </div>
+                </div>
             </div>
 
+            <h2 id="reviews" style="margin-top: 48px;">Lo que opinan nuestros clientes</h2>
             <div class="reviews-container">
-                <h2 id="reviews" style="margin-top: 8px;">Lo que opinan nuestros clientes</h2>
                 <div class="reviews-slider">
                     <div class="review-card">
                         <div class="review-header">
@@ -336,40 +469,57 @@
                         </div>
                         <p class="review-text">El asesoramiento tecnológico de DGM Tec fue crucial para nuestra transformación digital. <span class="highlight">Sus recomendaciones nos ayudaron a optimizar procesos y reducir costos operativos en un 30%</span>. Su visión estratégica es extraordinaria.</p>
                     </div>
-
                     <div class="review-card">
                         <div class="review-header">
-                            <div class="review-avatar">SR</div>
+                            <div class="review-avatar">PL</div>
                             <div>
-                                <strong>Sergio Ramos</strong>
-                                <div class="review-stars">★★★★☆</div>
-                            </div>
-                        </div>
-                        <p class="review-text">Buen trabajo en la integración de sistemas. <span class="highlight">La entrega fue puntual y el equipo respondió rápido a las incidencias</span>. Recomendable para proyectos que necesitan integración compleja entre herramientas.</p>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="review-avatar">CM</div>
-                            <div>
-                                <strong>Carmen Molina</strong>
+                                <strong>Patricia López</strong>
                                 <div class="review-stars">★★★☆☆</div>
                             </div>
                         </div>
-                        <p class="review-text">Servicio correcto en general, la comunicación pudo mejorar en fases finales. <span class="highlight">El resultado final cubrió las funciones esenciales de nuestra plataforma</span>, aunque hubo ajustes posteriores.</p>
+                        <p class="review-text"><span class="highlight">Un equipo comprometido con resultados, aunque algunos procesos tomaron más tiempo del esperado</span>. La calidad del trabajo es buena pero la planificación podría mejorar.</p>
                     </div>
-
                     <div class="review-card">
                         <div class="review-header">
-                            <div class="review-avatar">IB</div>
+                            <div class="review-avatar">RV</div>
                             <div>
-                                <strong>Iván Blanco</strong>
+                                <strong>Roberto Vázquez</strong>
+                                <div class="review-stars">★★★☆☆</div>
+                            </div>
+                        </div>
+                        <p class="review-text">Buenos resultados en general, con <span class="highlight">espacio para mejorar en tiempos de entrega y comunicación durante el desarrollo</span>. El producto final cumple con lo esperado.</p>
+                    </div>
+                    <!-- Duplicate cards for smooth infinite scroll -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">MC</div>
+                            <div>
+                                <strong>María Campos</strong>
                                 <div class="review-stars">★★★★★</div>
                             </div>
                         </div>
-                        <p class="review-text">Excelente trabajo en ciberseguridad. <span class="highlight">Detectaron y remediaron vulnerabilidades críticas antes del lanzamiento</span>, lo que nos dio tranquilidad y confianza para ofrecer el servicio en producción.</p>
+                        <p class="review-text">DGM Technologies transformó por completo nuestra presencia online. <span class="highlight">Su desarrollo web no solo mejoró nuestra imagen, sino que aumentó nuestras conversiones en un 150%</span>. El equipo fue profesional y atento durante todo el proceso.</p>
                     </div>
-
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">AR</div>
+                            <div>
+                                <strong>Antonio Ruiz</strong>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text"><span class="highlight">La aplicación móvil que desarrollaron para nuestra empresa ha revolucionado la forma en que interactuamos con nuestros clientes</span>. El proceso fue transparente y el resultado superó nuestras expectativas. ¡Totalmente recomendados!</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">LP</div>
+                            <div>
+                                <strong>Laura Pérez</strong>
+                                <div class="review-stars">★★★★½</div>
+                            </div>
+                        </div>
+                        <p class="review-text">Su servicio de ciberseguridad es excepcional. <span class="highlight">Identificaron vulnerabilidades críticas que no habíamos detectado y nos ayudaron a implementar medidas de protección efectivas</span>. Su experiencia en seguridad es invaluable.</p>
+                    </div>
                 </div>
             </div>
         </section>
