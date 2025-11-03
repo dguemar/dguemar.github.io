@@ -256,6 +256,49 @@
             .contact-grid{ grid-template-columns:1fr; }
         }
 
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                filter: blur(10px);
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                filter: blur(0);
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .hero p {
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 0.8s;
+        }
+
+        .hero .actions {
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 1.1s;
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 2.4s ease, transform 2.4s ease;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* small tweaks */
         a { color:var(--accent-2); }
         .brand-tag { color:var(--accent); font-weight:700; }
@@ -296,7 +339,7 @@
     </section>
 
     <main>
-        <section id="about" aria-labelledby="about-title">
+        <section id="about" aria-labelledby="about-title" class="fade-in-section">
             <h2 id="about-title">Quiénes somos</h2>
             <p class="lead"><span class="highlight" style="color:var(--accent-2)">En DGM Technologies, somos expertos en transformación digital y desarrollo tecnológico</span>, con más de una década de experiencia creando soluciones innovadoras que impulsan el crecimiento empresarial. Nuestro equipo multidisciplinar combina conocimientos técnicos avanzados con una profunda comprensión de las necesidades empresariales modernas.</p>
             <div class="about">
@@ -317,7 +360,7 @@
             </div>
         </section>
 
-        <section id="services" aria-labelledby="services-title">
+        <section id="services" aria-labelledby="services-title" class="fade-in-section">
                 <h2 id="services-title">Nuestros servicios</h2>
             <p class="lead">Ofrecemos servicios a medida según las necesidades del proyecto y del negocio.</p>
             <div class="services-grid">
@@ -344,7 +387,7 @@
             </div>
         </section>
 
-        <section id="partners" aria-labelledby="partners-title">
+        <section id="partners" aria-labelledby="partners-title" class="fade-in-section">
             <h2 id="partners-title">Empresas que confían en nosotros</h2>
             <p class="lead"><span class="highlight" style="color:var(--accent-2)">Colaboramos con organizaciones líderes</span> en diversos sectores, ayudándoles a alcanzar sus objetivos tecnológicos y empresariales.</p>
             <div class="partners-container">
@@ -524,7 +567,7 @@
             </div>
         </section>
 
-        <section id="contact" aria-labelledby="contact-title">
+        <section id="contact" aria-labelledby="contact-title" class="fade-in-section">
             <h2 id="contact-title">Contacto</h2>
             <p class="lead">Escríbenos para solicitar presupuesto o resolver dudas. Respondemos en menos de 48 horas hábiles.</p>
 
@@ -623,6 +666,23 @@
             form.reset();
             location.hash = '#contact';
         }
+
+        // Scroll animation
+        function checkFadeElements() {
+            const sections = document.querySelectorAll('.fade-in-section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight * 0.85) {
+                    section.classList.add('is-visible');
+                }
+            });
+        }
+
+        // Check elements on load and scroll
+        window.addEventListener('load', checkFadeElements);
+        window.addEventListener('scroll', checkFadeElements);
 
         // Set year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
