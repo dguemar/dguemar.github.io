@@ -37,6 +37,12 @@ header div{
 
 header div img{
     width: 8rem;
+
+    transition: transform 0.5s ease;
+}
+
+header:hover div img{
+    transform: rotate(-10deg) scale(1.08);
 }
 
 header div h1{
@@ -93,6 +99,9 @@ nav ul li a{
     text-align: center;
     padding-right: 15px;
     padding-left: 15px;
+
+    transition: all 0.5s ease;
+
 }
 
 nav ul li a:hover{
@@ -109,6 +118,8 @@ main{
     width: 80%;
     margin: 30px 0px;
     gap: 30px;
+    
+    animation: fadeUp 1s ease;
 }
 
 main hr{
@@ -166,6 +177,17 @@ main section ul li{
     text-decoration: none;
     color: white;
     padding: 15px;
+
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ven_des article:hover{
+    transform: translateY(-10px) scale(1.03);
+    border-color: #b3879e;
+    box-shadow: 0px 10px 25px rgba(179, 135, 158, 0.3);
+    background-color: #31202d;
 }
 
 .ven_des article:nth-child(1){
@@ -178,6 +200,13 @@ main section ul li{
 
 .ven_des article i{
     font-size: 4rem;
+
+    transition: all 0.4s ease;
+}
+
+.ven_des article:hover i{
+    transform: rotate(8deg) scale(1.2);
+    color: white;
 }
 
 .ven_des article:nth-child(1) i{
@@ -217,6 +246,17 @@ main section ul li{
     text-decoration: none;
     color: white;
     padding: 15px;
+
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tipos_sge article:hover{
+    transform: translateY(-10px) scale(1.03);
+    border-color: #b3879e;
+    box-shadow: 0px 10px 25px rgba(179, 135, 158, 0.3);
+    background-color: #31202d;
 }
 
 .tipos_sge article h3{
@@ -266,6 +306,13 @@ footer{
 .footer1 article ul li a{
     color: #815777;
     text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.footer1 article ul li a:hover{
+    color: white;
+    padding-left: 5px;
 }
 
 .footer1 a img{
@@ -323,6 +370,8 @@ footer section:last-child{
         flex-direction: column;
         align-items: center;
         padding: 10px 0px;
+
+        cursor: pointer;
     }
 
     .menu-button{
@@ -340,7 +389,6 @@ footer section:last-child{
         height: 35px;
         border: none;
         border-radius: 5px;
-        margin-left: 10px;
 
         background-color: #b3879e;
 
@@ -348,10 +396,21 @@ footer section:last-child{
 
         background-repeat: no-repeat;
         background-position: center;
+
+        transition: transform 0.4s ease;
+        cursor: pointer;
     }
 
-º   .menu:not(.show){
+    .menu-button button.active{
+        transform: rotate(90deg);
+    }
+
+    .menu:not(.show){
         display: none;
+    }
+
+    .menu.show{
+        display: flex;
     }
 
     nav ul{
@@ -411,4 +470,16 @@ footer section:last-child{
         font-size: 0.8rem;
     }
 
+}
+
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

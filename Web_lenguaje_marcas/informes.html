@@ -18,17 +18,17 @@
             <h1>SISTEMAS DE GESTIÓN EMPRESARIAL</h1>
             <img src="./images/logo_odoo.png" alt="Logo Odoo">
         </div>
-        <h3>Sitio web sobre instalación, configuración y uso de Odoo</h2>
+        <h3>Sitio web sobre instalación, configuración y uso de Odoo</h3>
     </header>
 
-    <nav>
-        <div class="menu-button">
-            <p>Menú</p>
-            <button onclick="mostrarMenu()"></button>
+    <nav onclick="mostrarMenu()">
+        <div class="menu-button" >
+            <button></button>
         </div>
         <ul class="menu">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="sge.html">¿Qué es un SGE?</a></li>
+            <li><a href="odoo.html">Odoo</a></li>
             <li><a href="seguridad.html">Seguridad</a></li>
             <li><a href="informes.html">Informes y exportación</a></li>
         </ul>
@@ -52,11 +52,11 @@
                     <h3>INFORMES DE VENTAS</h3>
                     <p>Estos informes ayudan a analizar el rendimiento comercial de la empresa. Los informes de ventas muestran información relacionada con:</p>
                     <ul>
-                        <li>Pedidos realizados.</li>
-                        <li>Productos vendidos.</li>
-                        <li>Clientes.</li>
-                        <li>Beneficios.</li>
-                        <li>Facturación.</li>
+                        <li>Pedidos realizados</li>
+                        <li>Productos vendidos</li>
+                        <li>Clientes</li>
+                        <li>Beneficios</li>
+                        <li>Facturación</li>
                     </ul>
                 </article>
 
@@ -65,10 +65,10 @@
                     <h3>INFORMES DE INVENTARIO</h3>
                     <p>Gracias a estos informes se puede evitar la falta de productos o el exceso de inventario. Permiten controlar:</p>
                     <ul>
-                        <li>Stock disponible.</li>
-                        <li>Productos almacenados.</li>
-                        <li>Entradas y salidas de mercancía.</li>
-                        <li>Movimientos de almacén.</li>
+                        <li>Stock disponible</li>
+                        <li>Productos almacenados</li>
+                        <li>Entradas y salidas de mercancía</li>
+                        <li>Movimientos de almacén</li>
                     </ul>
                 </article>
 
@@ -77,11 +77,11 @@
                     <h3>INFORMES FINANCIEROS</h3>
                     <p>Estos documentos son fundamentales para el control económico de la empresa. Son los relacionados con:</p>
                     <ul>
-                        <li>Facturas.</li>
-                        <li>Pagos.</li>
-                        <li>Gastos.</li>
-                        <li>Impuestos.</li>
-                        <li>Beneficios empresariales.</li>
+                        <li>Facturas</li>
+                        <li>Pagos</li>
+                        <li>Gastos</li>
+                        <li>Impuestos</li>
+                        <li>Beneficios empresariales</li>
                     </ul>
                 </article>
 
@@ -90,10 +90,10 @@
                     <h3>INFORMES DE CLIENTES</h3>
                     <p>El sistema puede mostrar estadísticas relacionadas con clientes y actividades comerciales. Por ejemplo:</p>
                     <ul>
-                        <li>Clientes más activos.</li>
-                        <li>Historial de compras.</li>
-                        <li>Oportunidades de venta.</li>
-                        <li>Actividades comerciales realizadas.</li>
+                        <li>Clientes más activos</li>
+                        <li>Historial de compras</li>
+                        <li>Oportunidades de venta</li>
+                        <li>Actividades comerciales realizadas</li>
                     </ul>
                 </article>
             </div>
@@ -117,7 +117,7 @@
 
         <section>
             <h2>Vídeo</h2>
-            <video src="./videos/instalacion.mp4" controls></video>
+            <video src="./videos/informes.mp4" controls></video>
         </section>
     </main>
 
@@ -157,7 +157,9 @@
     <script>
         function mostrarMenu(){
             let menu = document.querySelector(".menu");
+            let boton = document.querySelector(".menu-button button");
             menu.classList.toggle("show");
+            boton.classList.toggle("active");
         }
     </script>
 </body>

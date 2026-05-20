@@ -18,13 +18,12 @@
             <h1>SISTEMAS DE GESTIÓN EMPRESARIAL</h1>
             <img src="./images/logo_odoo.png" alt="Logo Odoo">
         </div>
-        <h3>Sitio web sobre instalación, configuración y uso de Odoo</h2>
+        <h3>Sitio web sobre instalación, configuración y uso de Odoo</h3>
     </header>
 
-    <nav>
-        <div class="menu-button">
-            <p>Menú</p>
-            <button onclick="mostrarMenu()"></button>
+    <nav onclick="mostrarMenu()">
+        <div class="menu-button" >
+            <button></button>
         </div>
         <ul class="menu">
             <li><a href="index.html">Inicio</a></li>
@@ -69,6 +68,7 @@
                 <li><strong>Recursos Humanos:</strong> Gestión de empleados, contratos y nóminas.</li>
                 <li><strong>CRM:</strong> Administración de clientes y oportunidades de negocio.</li>
                 <li><strong>Producción:</strong> Planificación y control de fabricación.</li>
+                <li><strong>Sitio web:</strong> Administración y diseño de la página web.</li>
             </ul>
         </section>
 
@@ -80,10 +80,10 @@
                 <article>
                     <i class="fa-solid fa-circle-check"></i>
                     <ul>
-                        <li>Mejora de productividad, ahorrar tiempo y recursos.</li>
+                        <li>Mejora de productividad, ahorrar tiempo y recursos</li>
                         <li>Mejor organización</li>
-                        <li>Evita duplicidades y reduce errores manuales.</li>
-                        <li>Mejor comunicación interna porque los departamentos comparten información en tiempo real.</li>
+                        <li>Evita duplicidades y reduce errores manuales</li>
+                        <li>Mejor comunicación interna porque los departamentos comparten información en tiempo real</li>
                         <li>Mayor control empresarial</li>
                     </ul>
                 </article>
@@ -91,10 +91,10 @@
                 <article>
                     <i class="fa-solid fa-circle-xmark"></i>
                     <ul>
-                        <li>Algunos SGE son caros de implantar.</li>
-                        <li>Los trabajadores necesitan aprender a utilizar el sistema.</li>
-                        <li>Se produce una dependencia tecnológica de la empresa que necesita el software para muchas tareas diarias.</li>
-                        <li>La instalación y configuración requieren bastante tiempo.</li>
+                        <li>Algunos SGE son caros de implantar</li>
+                        <li>Los trabajadores necesitan aprender a utilizar el sistema</li>
+                        <li>Se produce una dependencia tecnológica de la empresa que necesita el software para muchas tareas diarias</li>
+                        <li>La instalación y configuración requieren bastante tiempo</li>
                     </ul>
                 </article>
             </div>
@@ -109,14 +109,14 @@
                 <article>
                     <h3>ERP</h3>
                     <strong>(Enterprise Resource Planning)</strong>
-                    <p>Los ERP son sistemas orientados a la planificación y gestión de recursos empresariales. Integran todas las áreas de la empresa en una única plataforma.</p>
+                    <p>Los ERP son sistemas orientados a la planificación y gestión de recursos empresariales. Integran todas las áreas de la empresa en una única plataforma</p>
                     <strong>Características de los ERP:</strong>
                     <ul>
-                        <li>Base de datos centralizada.</li>
-                        <li>Automatización de procesos.</li>
-                        <li>Integración entre departamentos.</li>
-                        <li>Gestión en tiempo real.</li>
-                        <li>Acceso multiusuario.</li>
+                        <li>Base de datos centralizada</li>
+                        <li>Automatización de procesos</li>
+                        <li>Integración entre departamentos</li>
+                        <li>Gestión en tiempo real</li>
+                        <li>Acceso multiusuario</li>
                     </ul>
                     <strong>Ejemplos de ERP</strong>
                     <ul>
@@ -129,13 +129,13 @@
                 <article>
                     <h3>CRM</h3>
                     <strong>(Customer Relationship Management)</strong>
-                    <p>Los CRM están diseñados para gestionar la relación con los clientes. Permiten almacenar información comercial y mejorar la atención al cliente.</p>
+                    <p>Los CRM están diseñados para gestionar la relación con los clientes. Permiten almacenar información comercial y mejorar la atención al cliente</p>
                     <strong>Funciones principales</strong>
                     <ul>
-                        <li>Gestión de contactos.</li>
-                        <li>Seguimiento de ventas.</li>
-                        <li>Automatización comercial.</li>
-                        <li>Atención al cliente.</li>
+                        <li>Gestión de contactos</li>
+                        <li>Seguimiento de ventas</li>
+                        <li>Automatización comercial</li>
+                        <li>Atención al cliente</li>
                     </ul>
                     <strong>Ejemplos</strong>
                     <ul>
@@ -147,7 +147,7 @@
                 <article>
                     <h3>SCM</h3>
                     <strong>(Supply Chain Management)</strong>
-                    <p>Los SCM se utilizan para gestionar la cadena de suministro de una empresa. Estos sistemas ayudan a mejorar la logística y reducir costes.</p>
+                    <p>Los SCM se utilizan para gestionar la cadena de suministro de una empresa. Estos sistemas ayudan a mejorar la logística y reducir costes</p>
                     <strong>Permiten controlar:</strong>
                     <ul>
                         <li>Transporte</li>
@@ -205,7 +205,9 @@
     <script>
         function mostrarMenu(){
             let menu = document.querySelector(".menu");
+            let boton = document.querySelector(".menu-button button");
             menu.classList.toggle("show");
+            boton.classList.toggle("active");
         }
     </script>
 </body>

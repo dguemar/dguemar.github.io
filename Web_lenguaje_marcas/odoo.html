@@ -18,13 +18,12 @@
             <h1>SISTEMAS DE GESTIÓN EMPRESARIAL</h1>
             <img src="./images/logo_odoo.png" alt="Logo Odoo">
         </div>
-        <h3>Sitio web sobre instalación, configuración y uso de Odoo</h2>
+        <h3>Sitio web sobre instalación, configuración y uso de Odoo</h3>
     </header>
 
-    <nav>
-        <div class="menu-button">
-            <p>Menú</p>
-            <button onclick="mostrarMenu()"></button>
+    <nav onclick="mostrarMenu()">
+        <div class="menu-button" >
+            <button></button>
         </div>
         <ul class="menu">
             <li><a href="index.html">Inicio</a></li>
@@ -73,14 +72,14 @@
 
         <section>
             <h2>CONFIGURACIÓN INICIAL</h2>
-            <video src="./videos/instalacion.mp4" controls></video>
+            <video src="./videos/conf_inicial.mp4" controls></video>
         </section>
 
         <hr>
 
         <section>
             <h2>ADMINISTRACIÓN DEL SISTEMA</h2>
-            <video src="./videos/instalacion.mp4" controls></video>
+            <video src="./videos/admin_sistema.mp4" controls></video>
         </section>
     </main>
 
@@ -120,7 +119,9 @@
     <script>
         function mostrarMenu(){
             let menu = document.querySelector(".menu");
+            let boton = document.querySelector(".menu-button button");
             menu.classList.toggle("show");
+            boton.classList.toggle("active");
         }
     </script>
 </body>

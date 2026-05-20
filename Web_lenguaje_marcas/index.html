@@ -18,17 +18,12 @@
             <h1>SISTEMAS DE GESTIÓN EMPRESARIAL</h1>
             <img src="./images/logo_odoo.png" alt="Logo Odoo">
         </div>
-        <h3>Sitio web sobre instalación, configuración y uso de Odoo</h2>
-        <!--<div class="menu-button">
-            <p>Menú</p>
-            <button onclick="mostrarMenu()"></button>
-        </div>-->
+        <h3>Sitio web sobre instalación, configuración y uso de Odoo</h3>
     </header>
 
-    <nav>
-        <div class="menu-button">
-            <p>Menú</p>
-            <button onclick="mostrarMenu()"></button>
+    <nav onclick="mostrarMenu()">
+        <div class="menu-button" >
+            <button></button>
         </div>
         <ul class="menu">
             <li><a href="#">Inicio</a></li>
@@ -42,7 +37,7 @@
     <main>
         <div>
             <h2>
-                Bienvenido a este proyecto sobre Sistemas de Gestión Empresarial y Odoo ERP.
+                Bienvenido a este proyecto sobre Sistemas de Gestión Empresarial y Odoo ERP
             </h2>
             <p>
                 Mi nombre es <strong>Daniel</strong> y en esta página web se mostrará información relacionada con la <strong>instalación, 
@@ -63,22 +58,22 @@
         </div>
         <h2>¡ DISFRUTA DE LA EXPERIENCIA !</h2>
         <section>
-            <a href="#">
+            <a href="sge.html">
                 <i class="fa-solid fa-toolbox"></i>
                 <h3>¿Qué es un SGE?</h3>
                 <p>Definición, tipos y características</p>
             </a>
-            <a href="#">
+            <a href="odoo.html">
                 <i class="fa-solid fa-o"></i>
                 <h3>Odoo ERP</h3>
                 <p>Instalación, configuración y administración</p>
             </a>
-            <a href="#">
+            <a href="seguridad.html">
                 <i class="fa-solid fa-lock"></i>
                 <h3>Seguridad</h3>
                 <p>Roles, permisos y control de acceso</p>
             </a>
-            <a href="#">
+            <a href="informes.html">
                 <i class="fa-solid fa-file-arrow-down"></i>
                 <h3>Informes</h3>
                 <p>Generación de informes y exportación de datos</p>
@@ -125,7 +120,9 @@
     <script>
         function mostrarMenu(){
             let menu = document.querySelector(".menu");
+            let boton = document.querySelector(".menu-button button");
             menu.classList.toggle("show");
+            boton.classList.toggle("active");
         }
     </script>
 </body>

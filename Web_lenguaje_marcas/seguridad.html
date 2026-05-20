@@ -18,13 +18,12 @@
             <h1>SISTEMAS DE GESTIÓN EMPRESARIAL</h1>
             <img src="./images/logo_odoo.png" alt="Logo Odoo">
         </div>
-        <h3>Sitio web sobre instalación, configuración y uso de Odoo</h2>
+        <h3>Sitio web sobre instalación, configuración y uso de Odoo</h3>
     </header>
 
-    <nav>
-        <div class="menu-button">
-            <p>Menú</p>
-            <button onclick="mostrarMenu()"></button>
+    <nav onclick="mostrarMenu()">
+        <div class="menu-button" >
+            <button></button>
         </div>
         <ul class="menu">
             <li><a href="index.html">Inicio</a></li>
@@ -63,11 +62,11 @@
                 <p>El administrador posee <strong>acceso completo</strong> al sistema.</p>
                 <p>Puede:</p>
                 <ul>
-                    <li>Crear usuarios.</li>
-                    <li>Instalar módulos.</li>
-                    <li>Modificar configuraciones.</li>
-                    <li>Gestionar permisos.</li>
-                    <li>Acceder a toda la información empresarial.</li>
+                    <li>Crear usuarios</li>
+                    <li>Instalar módulos</li>
+                    <li>Modificar configuraciones</li>
+                    <li>Gestionar permisos</li>
+                    <li>Acceder a toda la información empresarial</li>
                 </ul>
             </div>
         </section>
@@ -76,12 +75,12 @@
 
         <section>
             <h2>CONTROL DE ACCESO</h2>
-            <p>Odoo utiliza un sistema de <strong>permisos</strong> para controlar qué acciones puede realizar cada usuario. Los permisos permiten definir si un usuario puede:</p>
+            <p>Odoo utiliza un sistema de <strong>permisos</strong> para controlar qué acciones puede realizar cada usuario. Los permisos permiten definir si un usuario puede o no:</p>
             <ul>
-                <li>Leer información.</li>
-                <li>Crear registros.</li>
-                <li>Modificar datos.</li>
-                <li>Eliminar información.</li>
+                <li>Leer información</li>
+                <li>Crear registros</li>
+                <li>Modificar datos</li>
+                <li>Eliminar información</li>
             </ul>
             <p>De esta manera, el sistema garantiza un mayor control sobre la seguridad empresarial.</p>
         </section>
@@ -95,31 +94,31 @@
                 <article>
                     <i class="fa-solid fa-key"></i>
                     <h3>Contraseñas seguras</h3>
-                    <p>Es recomendable utilizar contraseñas complejas para aumentar la seguridad del sistema.</p>
+                    <p>Es recomendable utilizar contraseñas complejas para aumentar la seguridad del sistema</p>
                 </article>
 
                 <article>
                     <i class="fa-solid fa-database"></i>
                     <h3>Copias de seguridad</h3>
-                    <p>Las copias de seguridad permiten recuperar la información en caso de fallo o pérdida de datos.</p>
+                    <p>Las copias de seguridad permiten recuperar la información en caso de fallo o pérdida de datos</p>
                 </article>
 
                 <article>
                     <i class="fa-solid fa-clock"></i>
                     <h3>Registro de actividad</h3>
-                    <p>El sistema puede registrar acciones realizadas por los usuarios para mejorar el control interno.</p>
+                    <p>El sistema puede registrar acciones realizadas por los usuarios para mejorar el control interno</p>
                 </article>
 
                 <article>
                     <i class="fa-solid fa-ban"></i>
                     <h3>Acceso restringido</h3>
-                    <p>Cada usuario solo puede acceder a los módulos autorizados por el administrador.</p>
+                    <p>Cada usuario solo puede acceder a los módulos autorizados por el administrador</p>
                 </article>
 
                 <article>
                     <i class="fa-solid fa-rotate"></i>
                     <h3>Actualizaciones del sistema</h3>
-                    <p>Mantener Odoo actualizado ayuda a corregir errores y mejorar la seguridad.</p>
+                    <p>Mantener Odoo actualizado ayuda a corregir errores y mejorar la seguridad</p>
                 </article>
             </div>
         </section>
@@ -127,8 +126,8 @@
         <hr>
 
         <section>
-            <h2>Vídeo</h2>
-            <video src="./videos/instalacion.mp4" controls></video>
+            <h2>Vídeo sobre usuarios, roles y permisos</h2>
+            <video src="./videos/usuarios.mp4" controls></video>
         </section>
     </main>
 
@@ -168,7 +167,9 @@
     <script>
         function mostrarMenu(){
             let menu = document.querySelector(".menu");
+            let boton = document.querySelector(".menu-button button");
             menu.classList.toggle("show");
+            boton.classList.toggle("active");
         }
     </script>
 </body>
