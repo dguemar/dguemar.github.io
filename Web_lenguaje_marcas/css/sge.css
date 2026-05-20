@@ -380,10 +380,6 @@ footer section:last-child{
         align-items: center;
     }
 
-    .menu-button p{
-        font-family: "Kavoon";
-    }
-
     .menu-button button{
         width: 35px;
         height: 35px;

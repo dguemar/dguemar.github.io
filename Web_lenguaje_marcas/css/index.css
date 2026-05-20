@@ -13,7 +13,6 @@ body {
     font-family: "Roboto";
     background-color: #261A24;
     color: whitesmoke;
-    background-position: center;
 }
 
 /*HEADER*/
@@ -24,7 +23,6 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-position: center;
     padding: 20px 0px;
     background-color: #1A0E17;
 }
