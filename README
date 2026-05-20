@@ -1,5 +1,8 @@
 NOTAS Y OBSERVACIONES:
-- En todos los CSS se repite el mismo código. Sobre todo el del header, nav, footer y media queries. Todo esto, se podría incluir en un archivo CSS general y en cada página añadir el link de dos stylesheets. El general y el específico. Sin embargo, no se ha hecho esto, porque como no lo hemos visto en clase, se podría interpretar que había sido generado con IA, y no quería que se malpensase. Pero es totalmente factible.
+- En todos los CSS se repite el mismo código. Sobre todo el del header, nav, footer y media queries. Todo esto, se podría incluir en un 
+archivo CSS general y en cada página añadir el link de dos stylesheets. El general y el específico. Sin embargo, no se ha hecho esto, 
+porque como no lo hemos visto en clase, se podría interpretar que había sido generado con IA, y no quería que se malpensase. Pero es 
+totalmente factible.
 - Las animaciones y transiciones se han elaborado con ayuda de la IA, pero entendiendo todo el proceso.
 - Se podría haber añadido más código JavaScript, igual que animaciones y transiciones, pero no se ha querido sobrecargar la página.
 - Todos los vídeos, capturas y voz en off, son auténticos y realizados por mí.
