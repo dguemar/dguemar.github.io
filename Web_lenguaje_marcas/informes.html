@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <title>Informes y exportación</title>
+    <link rel="stylesheet" href="./css/informes.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
@@ -19,10 +19,6 @@
             <img src="./images/logo_odoo.png" alt="Logo Odoo">
         </div>
         <h3>Sitio web sobre instalación, configuración y uso de Odoo</h2>
-        <!--<div class="menu-button">
-            <p>Menú</p>
-            <button onclick="mostrarMenu()"></button>
-        </div>-->
     </header>
 
     <nav>
@@ -31,16 +27,98 @@
             <button onclick="mostrarMenu()"></button>
         </div>
         <ul class="menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">¿Qué es un SGE?</a></li>
-            <li><a href="#">Odoo</a></li>
-            <li><a href="#">Seguridad</a></li>
-            <li><a href="#">Informes y exportación</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sge.html">¿Qué es un SGE?</a></li>
+            <li><a href="seguridad.html">Seguridad</a></li>
+            <li><a href="informes.html">Informes y exportación</a></li>
         </ul>
     </nav>
 
     <main>
-        
+        <section>
+            <h2>INFORMES</h2>
+            <p>Los Sistemas de Gestión Empresarial permiten almacenar y organizar una gran cantidad de información relacionada con las actividades de una empresa. Para facilitar el análisis de estos datos, los SGE incorporan herramientas capaces de <strong>generar informes automáticos</strong> sobre diferentes áreas empresariales, como ventas, inventario, clientes o facturación. Estos informes muestran información actualizada y organizada, ayudando a supervisar el funcionamiento de la empresa y facilitando la <strong>toma de decisiones</strong>.</p>
+            <p>Gracias a estas herramientas, las empresas pueden analizar resultados, detectar problemas y mejorar la planificación de sus actividades. En Odoo, la generación de informes se realiza de forma sencilla desde los distintos módulos del sistema, permitiendo visualizar datos mediante <strong>tablas, estadísticas y gráficos</strong>.</p>
+            <p>Los informes son fundamentales dentro de los Sistemas de Gestión Empresarial, ya que permiten controlar la situación económica, el rendimiento empresarial y el estado de diferentes procesos de trabajo de manera <strong>rápida y eficiente</strong>.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>TIPOS DE INFORMES</h2>
+            <div class="informes-grid">
+                <article>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>INFORMES DE VENTAS</h3>
+                    <p>Estos informes ayudan a analizar el rendimiento comercial de la empresa. Los informes de ventas muestran información relacionada con:</p>
+                    <ul>
+                        <li>Pedidos realizados.</li>
+                        <li>Productos vendidos.</li>
+                        <li>Clientes.</li>
+                        <li>Beneficios.</li>
+                        <li>Facturación.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <i class="fa-solid fa-warehouse"></i>
+                    <h3>INFORMES DE INVENTARIO</h3>
+                    <p>Gracias a estos informes se puede evitar la falta de productos o el exceso de inventario. Permiten controlar:</p>
+                    <ul>
+                        <li>Stock disponible.</li>
+                        <li>Productos almacenados.</li>
+                        <li>Entradas y salidas de mercancía.</li>
+                        <li>Movimientos de almacén.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <i class="fa-solid fa-coins"></i>
+                    <h3>INFORMES FINANCIEROS</h3>
+                    <p>Estos documentos son fundamentales para el control económico de la empresa. Son los relacionados con:</p>
+                    <ul>
+                        <li>Facturas.</li>
+                        <li>Pagos.</li>
+                        <li>Gastos.</li>
+                        <li>Impuestos.</li>
+                        <li>Beneficios empresariales.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <i class="fa-solid fa-users"></i>
+                    <h3>INFORMES DE CLIENTES</h3>
+                    <p>El sistema puede mostrar estadísticas relacionadas con clientes y actividades comerciales. Por ejemplo:</p>
+                    <ul>
+                        <li>Clientes más activos.</li>
+                        <li>Historial de compras.</li>
+                        <li>Oportunidades de venta.</li>
+                        <li>Actividades comerciales realizadas.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>EXPORTACIÓN DE INFORMACIÓN</h2>
+            <p>Además de generar informes, Odoo permite <strong>exportar información</strong> almacenada en el sistema.</p>
+            <p>Esta función es útil para:</p>
+            <ul>
+                <li>Realizar copias de datos.</li>
+                <li>Compartir información.</li>
+                <li>Trabajar con otros programas.</li>
+                <li>Analizar datos externamente.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Vídeo</h2>
+            <video src="./videos/instalacion.mp4" controls></video>
+        </section>
     </main>
 
     <footer>
@@ -49,11 +127,11 @@
                 <h4>Páginas</h4>
                 <hr>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">¿Qué es un SGE?</a></li>
-                    <li><a href="#">Odoo</a></li>
-                    <li><a href="#">Seguridad</a></li>
-                    <li><a href="#">Informes y exportación</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sge.html">¿Qué es un SGE?</a></li>
+                    <li><a href="odoo.html">Odoo</a></li>
+                    <li><a href="seguridad.html">Seguridad</a></li>
+                    <li><a href="informes.html">Informes y exportación</a></li>
                 </ul>
             </article>
             <a href="index.html">
@@ -63,19 +141,17 @@
                 <h4>Recursos externos</h4>
                 <hr>
                 <ul>
-                    <li><a href="#">Odoo oficial</a></li>
-                    <li><a href="#">Descargar Odoo</a></li>
-                    <li><a href="#">Github personal</a></li>
-                    <li><a href="#">Seguridad</a></li>
+                    <li><a href="https://www.odoo.com/es_ES?msockid=2c8c48be11f660f002575fe810ef6156">Odoo oficial</a></li>
+                    <li><a href="https://www.odoo.com/es_ES/page/download?msockid=2c8c48be11f660f002575fe810ef6156">Descargar Odoo</a></li>
+                    <li><a href="https://www.odoo.com/es_ES/security">Seguridad</a></li>
+                    <li><a href="hhttps://www.odoo.com/es_ES/privacy">Privacidad</a></li>
+                    <li><a href="https://github.com/dguemar">Github personal</a></li>
                 </ul>
             </article>
         </section>
         <section>
             <h5>&copy; 2026 DGM || Desarrollado por Daniel Guerrero Martín || All rights reserved</h5>
         </section>
-        
-
-        
     </footer>
 
     <script>

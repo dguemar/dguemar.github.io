@@ -56,7 +56,7 @@ header h3{
     color: #815777;
 }
 
-/**/
+/*NAV*/
 
 .menu-button{
     display: none;
@@ -100,7 +100,7 @@ nav ul li a:hover{
     height: 120%;
 }
 
-/**/
+/*MAIN*/
 
 main{
     display: flex;
@@ -116,10 +116,13 @@ main div{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 20px;
 }
 
-main h3{
+main h2{
+    font-family: "Kavoon";
     color: #b3879e;
+    letter-spacing: 3px;
 }
 
 main div p{
@@ -144,7 +147,7 @@ main section a{
     justify-content: space-around;
     align-items: center;
     border: 1px solid #815777;
-    border-radius: 10%;
+    border-radius: 10px;
     width: 250px;
     height: 200px;
     text-decoration: none;
@@ -169,10 +172,10 @@ main section a p{
 
 
 
-/**/
+/*FOOTER*/
 
 footer{
-    background-color: hsl(315, 30%, 8%);
+    background-color: #1A0E17;
     width: 100%;
 
 }
@@ -220,7 +223,6 @@ footer section:last-child{
 
 @media screen and (max-width: 1024px) and (min-width: 769px){
 
-    /* BODY */
     main{
         width: 90%;
     }
@@ -244,8 +246,6 @@ footer section:last-child{
 
 @media screen and (max-width: 768px){
 
-    /* HEADER */
-
     header img{
         display: none;
     }
@@ -255,8 +255,6 @@ footer section:last-child{
         font-size: 2rem;
         letter-spacing: 3px;
     }
-
-    /* NAV */
 
     nav{
         height: auto;
@@ -273,28 +271,30 @@ footer section:last-child{
     }
 
     .menu-button p{
-    font-family: "Kavoon";
+        font-family: "Kavoon";
     }
 
     .menu-button button{
-    width: 35px;
-    height: 35px;
-    border: none;
-    border-radius: 5px;
-    margin-left: 10px;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+        margin-left: 10px;
 
-    background-color: #b3879e;
+        background-color: #b3879e;
 
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2826,14,23,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2826,14,23,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 
-    background-repeat: no-repeat;
-    background-position: center;
+        background-repeat: no-repeat;
+        background-position: center;
     }
-
-    /* si NO tiene show -> oculto */
 
     .menu:not(.show){
         display: none;
+    }
+
+    .menu.show{
+        display: flex;
     }
 
     nav ul{
@@ -312,8 +312,6 @@ footer section:last-child{
         padding: 15px;
     }
 
-    /* MAIN */
-
     main{
         width: 95%;
     }
@@ -321,8 +319,6 @@ footer section:last-child{
     main section{
         justify-content: center;
     }
-
-    /* FOOTER */
 
     .footer1{
         padding: 20px;

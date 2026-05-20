@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <title>SGE</title>
+    <link rel="stylesheet" href="./css/sge.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
@@ -19,10 +19,6 @@
             <img src="./images/logo_odoo.png" alt="Logo Odoo">
         </div>
         <h3>Sitio web sobre instalación, configuración y uso de Odoo</h2>
-        <!--<div class="menu-button">
-            <p>Menú</p>
-            <button onclick="mostrarMenu()"></button>
-        </div>-->
     </header>
 
     <nav>
@@ -31,16 +27,146 @@
             <button onclick="mostrarMenu()"></button>
         </div>
         <ul class="menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">¿Qué es un SGE?</a></li>
-            <li><a href="#">Odoo</a></li>
-            <li><a href="#">Seguridad</a></li>
-            <li><a href="#">Informes y exportación</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sge.html">¿Qué es un SGE?</a></li>
+            <li><a href="odoo.html">Odoo</a></li>
+            <li><a href="seguridad.html">Seguridad</a></li>
+            <li><a href="informes.html">Informes y exportación</a></li>
         </ul>
     </nav>
 
     <main>
-        
+        <section>
+            <h2>¿QUÉ ES UN SGE?</h2>
+            <p>Un Sistema de Gestión Empresarial es un software que permite administrar diferentes procesos de una empresa desde una única aplicación. Su principal objetivo es <strong>centralizar toda la información empresarial y facilitar la gestión diaria</strong> de la organización.</p>
+            <p>Gracias a estos sistemas, todos los departamentos pueden <strong>trabajar de forma coordinada y comparten datos</strong> en tiempo real. Además, se automatizan tareas repetitivas, reduciendo errores y mejorando la productividad. Estos sistemas permiten el acceso simultáneo de múltiples usuarios mediante cuentas y permisos personalizados, garantizando así la seguridad y el control de la información.</p>
+            <p>Otra característica importante es su capacidad de <strong>adaptación</strong>, ya que pueden ampliarse con nuevos módulos según las necesidades de la empresa. También destacan por la generación automática de informes y estadísticas que ayudan a analizar datos y facilitar la toma de decisiones empresariales.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>FUNCIONAMIENTO DE UN SGE</h2>
+            <p>Los SGE funcionan mediante módulos conectados entre sí. <strong>Cada módulo se encarga de una parte específica de la empresa</strong>, pero todos comparten la misma base de datos. Por ejemplo:</p>
+            <ul>
+                <li>El departamento de ventas puede consultar el inventario disponible.</li>
+                <li>El departamento de contabilidad puede acceder automáticamente a las facturas generadas.</li>
+                <li>Recursos humanos puede gestionar empleados desde el mismo sistema.</li>
+            </ul>
+            <p>De esta forma, toda la información permanece actualizada y sincronizada.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>ÁREAS QUE GESTIONA UN SGE</h2>
+            <p>Un Sistema de Gestión Empresarial puede incluir diferentes módulos para gestionar, entre ellos:</p>
+            <ul>
+                <li><strong>Ventas:</strong> Control de clientes, presupuestos y pedidos.</li>
+                <li><strong>Compras:</strong> Gestión de proveedores y compras de productos.</li>
+                <li><strong>Inventario:</strong> Control de almacenes y stock disponible.</li>
+                <li><strong>Facturación y contabilidad:</strong> Emisión de facturas y control financiero.</li>
+                <li><strong>Recursos Humanos:</strong> Gestión de empleados, contratos y nóminas.</li>
+                <li><strong>CRM:</strong> Administración de clientes y oportunidades de negocio.</li>
+                <li><strong>Producción:</strong> Planificación y control de fabricación.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>VENTAJAS Y DESVENTAJAS DE UN SGE</h2>
+            <div class="ven_des">
+                <article>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <ul>
+                        <li>Mejora de productividad, ahorrar tiempo y recursos.</li>
+                        <li>Mejor organización</li>
+                        <li>Evita duplicidades y reduce errores manuales.</li>
+                        <li>Mejor comunicación interna porque los departamentos comparten información en tiempo real.</li>
+                        <li>Mayor control empresarial</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <ul>
+                        <li>Algunos SGE son caros de implantar.</li>
+                        <li>Los trabajadores necesitan aprender a utilizar el sistema.</li>
+                        <li>Se produce una dependencia tecnológica de la empresa que necesita el software para muchas tareas diarias.</li>
+                        <li>La instalación y configuración requieren bastante tiempo.</li>
+                    </ul>
+                </article>
+            </div>
+            
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>TIPOS DE SGE</h2>
+            <div class="tipos_sge">
+                <article>
+                    <h3>ERP</h3>
+                    <strong>(Enterprise Resource Planning)</strong>
+                    <p>Los ERP son sistemas orientados a la planificación y gestión de recursos empresariales. Integran todas las áreas de la empresa en una única plataforma.</p>
+                    <strong>Características de los ERP:</strong>
+                    <ul>
+                        <li>Base de datos centralizada.</li>
+                        <li>Automatización de procesos.</li>
+                        <li>Integración entre departamentos.</li>
+                        <li>Gestión en tiempo real.</li>
+                        <li>Acceso multiusuario.</li>
+                    </ul>
+                    <strong>Ejemplos de ERP</strong>
+                    <ul>
+                        <li>Odoo</li>
+                        <li>SAP ERP</li>
+                        <li>Oracle ERP</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>CRM</h3>
+                    <strong>(Customer Relationship Management)</strong>
+                    <p>Los CRM están diseñados para gestionar la relación con los clientes. Permiten almacenar información comercial y mejorar la atención al cliente.</p>
+                    <strong>Funciones principales</strong>
+                    <ul>
+                        <li>Gestión de contactos.</li>
+                        <li>Seguimiento de ventas.</li>
+                        <li>Automatización comercial.</li>
+                        <li>Atención al cliente.</li>
+                    </ul>
+                    <strong>Ejemplos</strong>
+                    <ul>
+                        <li>Salesforce</li>
+                        <li>HubSpot</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>SCM</h3>
+                    <strong>(Supply Chain Management)</strong>
+                    <p>Los SCM se utilizan para gestionar la cadena de suministro de una empresa. Estos sistemas ayudan a mejorar la logística y reducir costes.</p>
+                    <strong>Permiten controlar:</strong>
+                    <ul>
+                        <li>Transporte</li>
+                        <li>Distribución</li>
+                        <li>Almacenes</li>
+                        <li>Proveedores</li>
+                        <li>Producción</li>
+                    </ul>
+                    <strong>Ejemplos:</strong>
+                    <ul>
+                        <li>SAP Supply Chain Management</li>
+                        <li>Oracle SCM Cloud</li>
+                        <li>Infor Supply Chain Management</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+
     </main>
 
     <footer>
@@ -49,11 +175,11 @@
                 <h4>Páginas</h4>
                 <hr>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">¿Qué es un SGE?</a></li>
-                    <li><a href="#">Odoo</a></li>
-                    <li><a href="#">Seguridad</a></li>
-                    <li><a href="#">Informes y exportación</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sge.html">¿Qué es un SGE?</a></li>
+                    <li><a href="odoo.html">Odoo</a></li>
+                    <li><a href="seguridad.html">Seguridad</a></li>
+                    <li><a href="informes.html">Informes y exportación</a></li>
                 </ul>
             </article>
             <a href="index.html">
@@ -63,19 +189,17 @@
                 <h4>Recursos externos</h4>
                 <hr>
                 <ul>
-                    <li><a href="#">Odoo oficial</a></li>
-                    <li><a href="#">Descargar Odoo</a></li>
-                    <li><a href="#">Github personal</a></li>
-                    <li><a href="#">Seguridad</a></li>
+                    <li><a href="https://www.odoo.com/es_ES?msockid=2c8c48be11f660f002575fe810ef6156">Odoo oficial</a></li>
+                    <li><a href="https://www.odoo.com/es_ES/page/download?msockid=2c8c48be11f660f002575fe810ef6156">Descargar Odoo</a></li>
+                    <li><a href="https://www.odoo.com/es_ES/security">Seguridad</a></li>
+                    <li><a href="hhttps://www.odoo.com/es_ES/privacy">Privacidad</a></li>
+                    <li><a href="https://github.com/dguemar">Github personal</a></li>
                 </ul>
             </article>
         </section>
         <section>
             <h5>&copy; 2026 DGM || Desarrollado por Daniel Guerrero Martín || All rights reserved</h5>
         </section>
-        
-
-        
     </footer>
 
     <script>
