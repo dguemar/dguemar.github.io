@@ -869,7 +869,7 @@
     let detectedOwner = "dguemar";
     let detectedRepo = "dguemar.github.io";
 
-    if (host.endsWith(".github.io")) {
+    /*if (host.endsWith(".github.io")) {
       detectedOwner = host.split(".")[0];
       const segments = pathname.split("/").filter(Boolean);
       if (segments.length > 0 && !segments[0].endsWith(".html")) {
@@ -877,7 +877,8 @@
       } else {
         detectedRepo = detectedOwner + ".github.io";
       }
-    }
+    }*/
+    detectedRepo = "dguemar.github.io";
 
     if (params.get("repo")) {
       const r = params.get("repo");
